@@ -7,6 +7,18 @@ import warnings
 from pydantic import PydanticDeprecatedSince20
 from datetime import datetime
 from uuid import uuid4
+from crewai import LLM
+
+llm = LLM(
+    model="openai/gpt-4o-mini", # call model by provider/model_name
+    temperature=0.8,
+    max_tokens=350,
+    top_p=0.9,
+    frequency_penalty=0.1,
+    presence_penalty=0.1,
+    stop=["END"],
+    api_key=os.getenv("OPENAI_API_KEY")
+)
 
 warnings.filterwarnings("ignore", category=PydanticDeprecatedSince20)
 
@@ -28,6 +40,7 @@ with MCPServerAdapter(server_params) as tools:
         backstory="An experienced Dungeon Master that can make stat blocks for the player.",
         tools=tools,
         verbose=True,
+        llm=llm
     )
     task = Task(
         description="Make a stat block for the user's request with this description: {description}. Here is the request ID: {request_id}. Do not make up values, just pass whatever values the user gives you to the tool and let it do the rest.",
