@@ -5,6 +5,7 @@ This server provides JSON file operations as tools that can be discovered and us
 
 from mcp.server.fastmcp import FastMCP
 from file_utils.filename import make_filename
+from file_utils.ripgrep import run_ripgrep
 import json
 import os
 
@@ -32,6 +33,52 @@ def save_game_entity(request_id: str, game_entity: dict) -> str:
     with open(directory + filename, "w") as f:
         json.dump(game_entity, f, indent="\t")
     return filename
+
+@mcp.tool()
+def get_game_entity_by_id(request_id: str, game_id: str, game_entity_id: str) -> dict:
+    """Get a game entity given a known game_entity_id.
+    
+    Args:
+        request_id (str): The ID of the request.
+        game_id (str): The ID of the game.
+        game_entity_id (str): The ID of the game entity to get.
+    Returns:
+        dict: The loaded game entity, or raises FileNotFoundError if not found.
+    """
+    import os
+    import json
+
+    # Walk through BASE_PATH and look for files containing game_entity_id
+    for root, dirs, files in os.walk(BASE_PATH):
+        for file in files:
+            if game_entity_id in file and file.endswith('.json'):
+                file_path = os.path.join(root, file)
+                with open(file_path, 'r') as f:
+                    return json.load(f)
+    raise FileNotFoundError(f"No game entity file found containing id: {game_entity_id}")
+
+@mcp.tool()
+def find_entities(request_id: str, game_id: str, description: str, entity_type: str = "") -> list:
+    """Find entities that match the given description and (optionally) entity_type.
+    
+    Args:
+        request_id (str): The ID of the request.
+        game_id (str): The ID of the game.
+        description (str): The description of the entity to find.
+        entity_type (str, optional): The type of the entity to find. Defaults to "" (matches any type).
+    Returns:
+        list: A list of entities that match the given description and entity_type.
+    """
+    import os
+    import json
+    if entity_type:
+        search_path = BASE_PATH + game_id + "/" + entity_type + "/"
+    else:
+        search_path = BASE_PATH + game_id + "/"
+    matches = run_ripgrep(description, search_path)
+    if matches:
+        return [json.load(open(match['file'])) for match in matches]
+    return "No entities found matching description: {} and entity_type: {}".format(description, entity_type)
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")
