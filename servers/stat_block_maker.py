@@ -5,17 +5,19 @@ This server provides dice-rolling operations as tools that can be discovered and
 
 from mcp.server.fastmcp import FastMCP
 import random
+from uuid import uuid4
 from typing import Optional
 from character_creator.name_generator import FantasyNameGenerator
 
 mcp = FastMCP("Dice")
 
 @mcp.tool()
-def make_stat_block(request_id: str, description: str, name: Optional[str] = None, level: Optional[int] = None, cr: Optional[int] = None, strength: Optional[int] = None, dexterity: Optional[int] = None, constitution: Optional[int] = None, intelligence: Optional[int] = None, wisdom: Optional[int] = None, charisma: Optional[int] = None) -> dict:
+def make_stat_block(request_id: str, game_id: str, description: str, name: Optional[str] = None, level: Optional[int] = None, cr: Optional[int] = None, strength: Optional[int] = None, dexterity: Optional[int] = None, constitution: Optional[int] = None, intelligence: Optional[int] = None, wisdom: Optional[int] = None, charisma: Optional[int] = None) -> dict:
     """Create a D&D character stat block based on the provided parameters. Only request_id and description are required; other parameters will be filled in deterministically if not provided.
     
     Args:
         request_id (str): The ID of the request.
+        game_id (str): The ID of the game.
         description (str): A description of the creature.
         name (Optional[str]): The name of the creature. If None, will be generated from the description.
         level (Optional[int]): The level of the creature. If None, will be determined from the description.
@@ -78,7 +80,10 @@ def make_stat_block(request_id: str, description: str, name: Optional[str] = Non
     
     # Build the stat block as a dictionary
     stat_block = {
+        "id": str(uuid4()),
         "request_id": request_id,
+        "game_id": game_id,
+        "entity_type": "character",
         "name": name,
         "description": description,
         "level": level,

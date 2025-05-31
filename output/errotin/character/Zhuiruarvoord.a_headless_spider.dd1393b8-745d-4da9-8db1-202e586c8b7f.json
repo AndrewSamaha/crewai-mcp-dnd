@@ -1,0 +1,39 @@
+{
+	"id": "dd1393b8-745d-4da9-8db1-202e586c8b7f",
+	"game_id": "errotin",
+	"entity_type": "character",
+	"name": "Zhuiruarvoord",
+	"description": "a headless spider",
+	"level": 1,
+	"cr": 1,
+	"ability_scores": {
+		"strength": {
+			"score": 13,
+			"modifier": 1
+		},
+		"dexterity": {
+			"score": 8,
+			"modifier": -1
+		},
+		"constitution": {
+			"score": 15,
+			"modifier": 2
+		},
+		"intelligence": {
+			"score": 12,
+			"modifier": 1
+		},
+		"wisdom": {
+			"score": 11,
+			"modifier": 0
+		},
+		"charisma": {
+			"score": 15,
+			"modifier": 2
+		}
+	},
+	"derived_stats": {
+		"hp": 12,
+		"ac": 9
+	}
+}

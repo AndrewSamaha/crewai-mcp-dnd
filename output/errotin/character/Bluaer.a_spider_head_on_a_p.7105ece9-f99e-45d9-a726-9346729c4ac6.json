@@ -1,0 +1,40 @@
+{
+	"id": "7105ece9-f99e-45d9-a726-9346729c4ac6",
+	"request_id": "ddaac909-b122-4efd-8c45-c7484038dd89",
+	"game_id": "errotin",
+	"entity_type": "character",
+	"name": "Bluaer",
+	"description": "a spider head on a pike",
+	"level": 1,
+	"cr": 1,
+	"ability_scores": {
+		"strength": {
+			"score": 9,
+			"modifier": -1
+		},
+		"dexterity": {
+			"score": 12,
+			"modifier": 1
+		},
+		"constitution": {
+			"score": 16,
+			"modifier": 3
+		},
+		"intelligence": {
+			"score": 13,
+			"modifier": 1
+		},
+		"wisdom": {
+			"score": 8,
+			"modifier": -1
+		},
+		"charisma": {
+			"score": 8,
+			"modifier": -1
+		}
+	},
+	"derived_stats": {
+		"hp": 13,
+		"ac": 11
+	}
+}
