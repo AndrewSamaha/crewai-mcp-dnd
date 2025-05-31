@@ -1,0 +1,39 @@
+{
+	"id": "b2c9e0ad-c8ea-4109-9676-0743522efdff",
+	"game_id": "errotin",
+	"entity_type": "character",
+	"name": "Wegeissooaus",
+	"description": "a shiney, black viper",
+	"level": 1,
+	"cr": 1,
+	"ability_scores": {
+		"strength": {
+			"score": 17,
+			"modifier": 3
+		},
+		"dexterity": {
+			"score": 13,
+			"modifier": 1
+		},
+		"constitution": {
+			"score": 17,
+			"modifier": 3
+		},
+		"intelligence": {
+			"score": 12,
+			"modifier": 1
+		},
+		"wisdom": {
+			"score": 10,
+			"modifier": 0
+		},
+		"charisma": {
+			"score": 11,
+			"modifier": 0
+		}
+	},
+	"derived_stats": {
+		"hp": 13,
+		"ac": 11
+	}
+}

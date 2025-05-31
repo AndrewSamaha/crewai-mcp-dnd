@@ -1,0 +1,39 @@
+{
+	"id": "e361ebce-aa8b-405c-828b-05646b7951bc",
+	"game_id": "errotin",
+	"entity_type": "character",
+	"name": "Aima",
+	"description": "a green goblin",
+	"level": 1,
+	"cr": 1,
+	"ability_scores": {
+		"strength": {
+			"score": 14,
+			"modifier": 2
+		},
+		"dexterity": {
+			"score": 13,
+			"modifier": 1
+		},
+		"constitution": {
+			"score": 8,
+			"modifier": -1
+		},
+		"intelligence": {
+			"score": 12,
+			"modifier": 1
+		},
+		"wisdom": {
+			"score": 8,
+			"modifier": -1
+		},
+		"charisma": {
+			"score": 16,
+			"modifier": 3
+		}
+	},
+	"derived_stats": {
+		"hp": 9,
+		"ac": 11
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"id": "730a9928-9a92-4bb5-89b6-cd60a96daa45",
+	"request_id": "c289cab2-ed7a-4bfc-a233-70419e340f0e",
+	"game_id": "errotin",
+	"entity_type": "character",
+	"name": "Ockgeaboogau",
+	"description": "a skeleton child",
+	"level": 1,
+	"cr": 1,
+	"ability_scores": {
+		"strength": {
+			"score": 17,
+			"modifier": 3
+		},
+		"dexterity": {
+			"score": 16,
+			"modifier": 3
+		},
+		"constitution": {
+			"score": 10,
+			"modifier": 0
+		},
+		"intelligence": {
+			"score": 18,
+			"modifier": 4
+		},
+		"wisdom": {
+			"score": 11,
+			"modifier": 0
+		},
+		"charisma": {
+			"score": 12,
+			"modifier": 1
+		}
+	},
+	"derived_stats": {
+		"hp": 10,
+		"ac": 13
+	}
+}

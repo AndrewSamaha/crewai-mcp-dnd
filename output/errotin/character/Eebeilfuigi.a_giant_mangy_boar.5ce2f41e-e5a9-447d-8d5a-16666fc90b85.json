@@ -1,0 +1,39 @@
+{
+	"id": "5ce2f41e-e5a9-447d-8d5a-16666fc90b85",
+	"game_id": "errotin",
+	"entity_type": "character",
+	"name": "Eebeilfuigi",
+	"description": "a giant, mangy boar",
+	"level": 1,
+	"cr": 1,
+	"ability_scores": {
+		"strength": {
+			"score": 15,
+			"modifier": 2
+		},
+		"dexterity": {
+			"score": 10,
+			"modifier": 0
+		},
+		"constitution": {
+			"score": 14,
+			"modifier": 2
+		},
+		"intelligence": {
+			"score": 15,
+			"modifier": 2
+		},
+		"wisdom": {
+			"score": 17,
+			"modifier": 3
+		},
+		"charisma": {
+			"score": 17,
+			"modifier": 3
+		}
+	},
+	"derived_stats": {
+		"hp": 12,
+		"ac": 10
+	}
+}

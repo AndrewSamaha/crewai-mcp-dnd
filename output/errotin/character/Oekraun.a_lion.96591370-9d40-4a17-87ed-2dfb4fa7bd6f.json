@@ -1,0 +1,39 @@
+{
+	"id": "96591370-9d40-4a17-87ed-2dfb4fa7bd6f",
+	"game_id": "errotin",
+	"entity_type": "character",
+	"name": "Oekraun",
+	"description": "a lion",
+	"level": 1,
+	"cr": 1,
+	"ability_scores": {
+		"strength": {
+			"score": 10,
+			"modifier": 0
+		},
+		"dexterity": {
+			"score": 12,
+			"modifier": 1
+		},
+		"constitution": {
+			"score": 16,
+			"modifier": 3
+		},
+		"intelligence": {
+			"score": 17,
+			"modifier": 3
+		},
+		"wisdom": {
+			"score": 10,
+			"modifier": 0
+		},
+		"charisma": {
+			"score": 13,
+			"modifier": 1
+		}
+	},
+	"derived_stats": {
+		"hp": 13,
+		"ac": 11
+	}
+}
