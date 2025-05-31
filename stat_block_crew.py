@@ -24,6 +24,13 @@ warnings.filterwarnings("ignore", category=PydanticDeprecatedSince20)
 
 dotenv.load_dotenv()
 
+character_description = input("What kind of character do you want me to make? ")
+
+crew_input = {
+    "request_id": str(uuid4()),
+    "description": character_description
+}
+
 # Create a StdioServerParameters object
 server_params=StdioServerParameters(
     command="python3", 
@@ -53,5 +60,5 @@ with MCPServerAdapter(server_params) as tools:
         tasks=[task],
         verbose=True,
     )
-    result = crew.kickoff(inputs={"description": input("What kind of character do you want me to make? "), "request_id": str(uuid4())})
+    result = crew.kickoff(inputs=crew_input)
     print(result)
