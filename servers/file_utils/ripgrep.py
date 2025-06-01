@@ -1,5 +1,8 @@
 import subprocess
 from typing import List, Dict
+import json
+
+BASE_PATH="output/"
 
 def run_ripgrep(query: str, search_path: str = './output') -> List[Dict[str, str]]:
     """
@@ -26,21 +29,37 @@ def run_ripgrep(query: str, search_path: str = './output') -> List[Dict[str, str
             return []
 
     matches = []
-    current_file = None
-    last_file = None
     for line in output.splitlines():
-        # Multi-file search: filename line
-        if line.startswith(search_path) or line.startswith("./"):
-            current_file = line.strip()
-            last_file = current_file
-            continue
-        # Match lines like: 7:      "description": "a rotting hand",
-        if ':' in line:
-            # Single-file search: no filename line
-            if current_file is None:
-                # Use search_path as file if it's a file
-                file_path = search_path if os.path.isfile(search_path) else last_file
-            else:
-                file_path = current_file
-            matches.append({'file': file_path, 'line': line.strip()})
+        
+        # split line on tab
+        filename = line.split('\t')[0][:-1]
+        matching_str = line.split('\t')[1]
+        matches.append({'file': filename, 'line': matching_str.strip()})
+
     return matches
+
+def find_entities_fn(search_query: str, game_id: str, entity_type: str = "", search_path: str = './output') -> List[Dict[str, str]]:
+    """
+    Runs ripgrep (rg) with the given query and returns a list of dicts with filename and matching line.
+
+    Args:
+        query (str): The search string to pass to rg.
+        search_path (str): The directory or file path to search in (default: './output').
+    Returns:
+        list of dict: Each dict has 'file' (str) and 'line' (str) keys.
+    """
+    if entity_type:
+        search_path = BASE_PATH + game_id + "/" + entity_type + "/"
+    else:
+        search_path = BASE_PATH + game_id + "/"
+    
+    matches = run_ripgrep(search_query, search_path)
+    if matches:
+        entities = []
+        for match in matches:
+            entity = json.load(open(match['file']))
+            # if entity_type and entity["entity_type"] != entity_type:
+            #     continue
+            entities.append(entity)
+        return entities
+    return "No entities found matching search query: {} and entity_type: {}, search_path: {}, matches_result: {}".format(search_query, entity_type, search_path, matches)

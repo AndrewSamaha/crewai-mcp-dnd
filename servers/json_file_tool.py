@@ -5,13 +5,14 @@ This server provides JSON file operations as tools that can be discovered and us
 
 from mcp.server.fastmcp import FastMCP
 from file_utils.filename import make_filename
-from file_utils.ripgrep import run_ripgrep
+from file_utils.ripgrep import find_entities_fn
 import json
 import os
 
 mcp = FastMCP("JSON File")
 
 BASE_PATH="output/"
+
 def get_path(game_entity: dict) -> str:
     game_id = game_entity["game_id"]
     entity_type = game_entity["entity_type"]
@@ -58,27 +59,18 @@ def get_game_entity_by_id(request_id: str, game_id: str, game_entity_id: str) ->
     raise FileNotFoundError(f"No game entity file found containing id: {game_entity_id}")
 
 @mcp.tool()
-def find_entities(request_id: str, game_id: str, description: str, entity_type: str = "") -> list:
-    """Find entities that match the given description and (optionally) entity_type.
+def find_entities(request_id: str, game_id: str, search_query: str, entity_type: str = "") -> list:
+    """Find entities that match the given search query and (optionally) entity_type.
     
     Args:
         request_id (str): The ID of the request.
         game_id (str): The ID of the game.
-        description (str): The description of the entity to find.
+        search_query (str): The search query to use.
         entity_type (str, optional): The type of the entity to find. Defaults to "" (matches any type).
     Returns:
-        list: A list of entities that match the given description and entity_type.
+        list: A list of entities that match the given search query and entity_type.
     """
-    import os
-    import json
-    if entity_type:
-        search_path = BASE_PATH + game_id + "/" + entity_type + "/"
-    else:
-        search_path = BASE_PATH + game_id + "/"
-    matches = run_ripgrep(description, search_path)
-    if matches:
-        return [json.load(open(match['file'])) for match in matches]
-    return "No entities found matching description: {} and entity_type: {}".format(description, entity_type)
+    return find_entities_fn(search_query, game_id, entity_type)
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")
