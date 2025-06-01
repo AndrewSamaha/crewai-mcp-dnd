@@ -9,6 +9,10 @@ from datetime import datetime
 from uuid import uuid4
 from crewai import LLM
 import json
+import instrumentation.langfuse
+import openlit
+
+openlit.init()
 
 llm = LLM(
     model="openai/gpt-4o-mini", # call model by provider/model_name
