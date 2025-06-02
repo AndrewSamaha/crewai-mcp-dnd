@@ -73,7 +73,7 @@ SCHEMA_VERSION = "1.0.0"
 # ---------- Character class -----------------------------------------
 class Character:
     entity_type = "character"  # Class-level constant
-    def __init__(self, name: str, base_scores: Dict[str, int] | None = None, request_id: str = None, game_id: str = None, description: str = None):
+    def __init__(self, name: str, base_scores: Dict[str, int] | None = None, request_id: str = None, game_id: str = None, description: str = None, personality_profile: str = None, current_goal: str = None):
         self.entity_type = "character"
         self.id = str(uuid.uuid4())
         self.request_id = request_id
@@ -95,6 +95,8 @@ class Character:
         self.game_id = game_id
         self.description = description
         self.schema_version = SCHEMA_VERSION
+        self.personality_profile = personality_profile
+        self.current_goal = current_goal
         print(f"gameid={game_id}")
 
     def level_up(self, rng=random, average_hp=False):
@@ -178,6 +180,8 @@ class Character:
     def as_dict(self) -> Dict:
         return {
             "id": self.id,
+            "personality_profile": self.personality_profile,
+            "current_goal": self.current_goal,
             "entity_type": self.entity_type,
             "name": self.name,
             "race": self.race,
@@ -218,10 +222,10 @@ class Character:
 
 # ---------- Builder --------------------------------------------------
 
-def build_random_character(name: str = FantasyNameGenerator().generate_name(), rng=random, request_id: str = str(uuid.uuid4()), game_id: str = None, description: str = None, cr: int = None) -> Character:
+def build_random_character(name: str = FantasyNameGenerator().generate_name(), rng=random, request_id: str = str(uuid.uuid4()), game_id: str = None, description: str = None, cr: int = None, personality_profile: str = None, current_goal: str = None) -> Character:
     array = rng.sample([15, 14, 13, 12, 10, 8], k=6)
     base = dict(zip(ABILITIES, array))
-    pc = Character(name, base, request_id=request_id, game_id=game_id, description=description)
+    pc = Character(name, base, request_id=request_id, game_id=game_id, description=description, personality_profile=personality_profile, current_goal=current_goal)
     pc.apply_race(rng.choice(list(RACES)), rng=rng)
     pc.apply_class(rng.choice(list(CLASSES)))
     pc.apply_background(rng.choice(list(BACKGROUNDS)), rng=rng)

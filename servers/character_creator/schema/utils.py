@@ -4,6 +4,7 @@ SCHEMA_DEFINITIONS = {
     "1.0.0": {
         "fields": {
             "id", "entity_type", "name", "race", "class", "background", "level", "proficiency_bonus", "cr",
+            "personality_profile", "current_goal",
             "ability_scores", "max_hp", "ac", "saving_throws", "skills", "tools", "feats",
             "request_id", "game_id", "description", "schema_version"
         },
