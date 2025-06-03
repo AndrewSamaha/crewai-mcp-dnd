@@ -1,0 +1,41 @@
+{
+	"id": "6468b4ee-197e-40a8-ae2c-665980393c9f",
+	"personality_profile": null,
+	"current_goal": null,
+	"entity_type": "character",
+	"name": null,
+	"race": "Halfling",
+	"class": "Monk",
+	"background": "Merchant",
+	"level": 1,
+	"proficiency_bonus": 2,
+	"cr": 1,
+	"ability_scores": {
+		"STR": 14,
+		"DEX": 12,
+		"CON": 9,
+		"INT": 16,
+		"WIS": 12,
+		"CHA": 14
+	},
+	"max_hp": 7,
+	"ac": 12,
+	"saving_throws": [
+		"DEX",
+		"STR"
+	],
+	"skills": [
+		"Animal Handling",
+		"Persuasion"
+	],
+	"tools": [
+		"Navigator's Tools"
+	],
+	"feats": [
+		"Lucky"
+	],
+	"request_id": "ce5c6ed2-5e4f-43a3-a227-c48ee2fbe8a7",
+	"game_id": "errotin",
+	"description": "a raving lunatic",
+	"schema_version": "1.0.0"
+}

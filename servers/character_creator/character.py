@@ -7,7 +7,7 @@ backgrounds, plus derived HP and AC.  Added JSON export helpers.
 import random
 import json
 from typing import Dict, List
-from name_generator import FantasyNameGenerator
+from .name_generator import FantasyNameGenerator
 import json
 import uuid
 import os
@@ -97,7 +97,18 @@ class Character:
         self.schema_version = SCHEMA_VERSION
         self.personality_profile = personality_profile
         self.current_goal = current_goal
-        print(f"gameid={game_id}")
+
+    def get_personality_profile(self):
+        return self.personality_profile
+
+    def set_personality_profile(self, value: str):
+        self.personality_profile = value
+
+    def get_current_goal(self):
+        return self.current_goal
+
+    def set_current_goal(self, value: str):
+        self.current_goal = value
 
     def level_up(self, rng=random, average_hp=False):
         """Increase level by 1, update HP, proficiency, CR, and stub for features/ASI."""

@@ -1,0 +1,41 @@
+{
+	"id": "7af0d3dd-ca21-4ae4-b33d-a50b8d94a507",
+	"personality_profile": null,
+	"current_goal": null,
+	"entity_type": "character",
+	"name": null,
+	"race": "Half-Orc",
+	"class": "Cleric",
+	"background": "Merchant",
+	"level": 1,
+	"proficiency_bonus": 2,
+	"cr": 1,
+	"ability_scores": {
+		"STR": 16,
+		"DEX": 15,
+		"CON": 11,
+		"INT": 10,
+		"WIS": 13,
+		"CHA": 13
+	},
+	"max_hp": 8,
+	"ac": 12,
+	"saving_throws": [
+		"CHA",
+		"WIS"
+	],
+	"skills": [
+		"Animal Handling",
+		"Persuasion"
+	],
+	"tools": [
+		"Navigator's Tools"
+	],
+	"feats": [
+		"Lucky"
+	],
+	"request_id": "55b4ed58-c830-4aea-be32-268e643bc42c",
+	"game_id": "errotin",
+	"description": "a wild-eyed pirate",
+	"schema_version": "1.0.0"
+}
