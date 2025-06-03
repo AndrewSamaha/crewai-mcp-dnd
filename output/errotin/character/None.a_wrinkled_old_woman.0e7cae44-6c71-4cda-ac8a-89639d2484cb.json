@@ -1,0 +1,41 @@
+{
+	"id": "0e7cae44-6c71-4cda-ac8a-89639d2484cb",
+	"personality_profile": null,
+	"current_goal": null,
+	"entity_type": "character",
+	"name": null,
+	"race": "Dragonborn",
+	"class": "Monk",
+	"background": "Charlatan",
+	"level": 1,
+	"proficiency_bonus": 2,
+	"cr": 1,
+	"ability_scores": {
+		"STR": 15,
+		"DEX": 16,
+		"CON": 14,
+		"INT": 14,
+		"WIS": 8,
+		"CHA": 11
+	},
+	"max_hp": 10,
+	"ac": 12,
+	"saving_throws": [
+		"DEX",
+		"STR"
+	],
+	"skills": [
+		"Deception",
+		"Sleight of Hand"
+	],
+	"tools": [
+		"Forgery Kit"
+	],
+	"feats": [
+		"Skilled"
+	],
+	"request_id": "0304b321-7129-4938-beea-cf93b8f81736",
+	"game_id": "errotin",
+	"description": "a wrinkled old woman",
+	"schema_version": "1.0.0"
+}

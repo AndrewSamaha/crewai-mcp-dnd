@@ -1,0 +1,41 @@
+{
+	"id": "dd0cf1e9-8ce7-4b68-921a-91c267a4bcd3",
+	"personality_profile": null,
+	"current_goal": null,
+	"entity_type": "character",
+	"name": null,
+	"race": "Half-Elf",
+	"class": "Barbarian",
+	"background": "Artisan",
+	"level": 1,
+	"proficiency_bonus": 2,
+	"cr": 1,
+	"ability_scores": {
+		"STR": 10,
+		"DEX": 10,
+		"CON": 13,
+		"INT": 14,
+		"WIS": 16,
+		"CHA": 16
+	},
+	"max_hp": 13,
+	"ac": 11,
+	"saving_throws": [
+		"CON",
+		"STR"
+	],
+	"skills": [
+		"Investigation",
+		"Persuasion"
+	],
+	"tools": [
+		"One Artisan's Tools"
+	],
+	"feats": [
+		"Crafter"
+	],
+	"request_id": "0206723c-13c3-4f0b-b893-6728b533cda7",
+	"game_id": "errotin",
+	"description": "a wildling",
+	"schema_version": "1.0.0"
+}

@@ -1,0 +1,41 @@
+{
+	"id": "ea36cd42-b0b1-4484-b3e8-47f91494efae",
+	"personality_profile": null,
+	"current_goal": null,
+	"entity_type": "character",
+	"name": null,
+	"race": "Dwarf",
+	"class": "Rogue",
+	"background": "Charlatan",
+	"level": 1,
+	"proficiency_bonus": 2,
+	"cr": 1,
+	"ability_scores": {
+		"STR": 13,
+		"DEX": 13,
+		"CON": 13,
+		"INT": 14,
+		"WIS": 15,
+		"CHA": 9
+	},
+	"max_hp": 9,
+	"ac": 11,
+	"saving_throws": [
+		"DEX",
+		"INT"
+	],
+	"skills": [
+		"Deception",
+		"Sleight of Hand"
+	],
+	"tools": [
+		"Forgery Kit"
+	],
+	"feats": [
+		"Skilled"
+	],
+	"request_id": "559f435a-7317-4442-9592-3a6a97cc46a0",
+	"game_id": "errotin",
+	"description": "a stuttering slayer",
+	"schema_version": "1.0.0"
+}

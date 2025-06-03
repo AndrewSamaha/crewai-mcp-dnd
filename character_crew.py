@@ -1,13 +1,16 @@
-from crewai import Agent, Task, Crew
+from crewai import Agent, Task, Crew, Process
 from crewai_tools import MCPServerAdapter
 from mcp import StdioServerParameters
 import dotenv
 import os
 import warnings
 from pydantic import PydanticDeprecatedSince20
-from datetime import datetime
 from uuid import uuid4
 from crewai import LLM
+import instrumentation.langfuse
+import openlit
+
+openlit.init()
 
 llm = LLM(
     model="openai/gpt-4o-mini", # call model by provider/model_name
@@ -56,6 +59,14 @@ with MCPServerAdapter(server_params_list) as aggregated_tools:
         verbose=True,
         llm=llm
     )
+    character_creation_task = Task(
+        name="character_creation",
+        description="Make a character for the user's request with this description: '{description}'. Here is the request ID: '{request_id}' and the game ID: '{game_id}'. Do not make up values, just pass whatever values the user gives you to the tool and let it do the rest.",
+        expected_output="The resulting game entity (character) as a dictionary.",
+        agent=agent,
+        verbose=True,
+    )
+
     personality_agent = Agent(
         role="Personality-Profile Scribe of The Forgotten Realms",
         goal="Forge a vivid 40- to 80-word personality_profile for the provided character JSON, capturing temperament, one driving ideal or bond, and one flaw or vulnerability, in third-person present tense, free of game-mechanic jargon.",
@@ -64,22 +75,17 @@ with MCPServerAdapter(server_params_list) as aggregated_tools:
         verbose=True,
         llm=llm
     )
-    character_creation_task = Task(
-        name="character_creation",
-        description="Make a character for the user's request with this description: '{description}'. Here is the request ID: '{request_id}' and the game ID: '{game_id}'. Do not make up values, just pass whatever values the user gives you to the tool and let it do the rest.",
-        expected_output="The resulting game entity (character) as a dictionary.",
-        agent=agent,
-        verbose=True,
-    )
     personality_task = Task(
         name="personality_task",
-        description="Write a personality_profile for the character below and save it using the tool:\n\n{character_creation_task.output.raw_output}",
+        description="Write a personality_profile for the character below and add it to the character using the tool. Here is the current character:\n\n{character_creation_task.output.raw_output}",
         expected_output="Single 40-80 word sentence fragment",
         agent=personality_agent,
         tools=aggregated_tools,
         verbose=True,
     )
-    save_entity_task = Task(    
+
+    save_entity_task = Task(
+        name="save_entity_task",
         description="Save the game entity (the character) as a JSON file:\n\n{personality_task.output.raw_output}",
         expected_output="The filename where the character was saved.",
         agent=agent,
@@ -87,7 +93,8 @@ with MCPServerAdapter(server_params_list) as aggregated_tools:
     )
     crew = Crew(
         agents=[agent, personality_agent],
-        tasks=[character_creation_task, personality_task, save_entity_task],
+        tasks=[character_creation_task, save_entity_task, personality_task],
+        process=Process.sequential,
         verbose=True,
     )
     result = crew.kickoff(inputs=crew_input)

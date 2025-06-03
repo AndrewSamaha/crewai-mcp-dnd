@@ -1,0 +1,41 @@
+{
+	"id": "df6c283c-f4bd-4475-b45a-ce281f672ecf",
+	"personality_profile": null,
+	"current_goal": null,
+	"entity_type": "character",
+	"name": null,
+	"race": "Dragonborn",
+	"class": "Wizard",
+	"background": "Artisan",
+	"level": 1,
+	"proficiency_bonus": 2,
+	"cr": 1,
+	"ability_scores": {
+		"STR": 14,
+		"DEX": 17,
+		"CON": 8,
+		"INT": 11,
+		"WIS": 13,
+		"CHA": 15
+	},
+	"max_hp": 5,
+	"ac": 13,
+	"saving_throws": [
+		"INT",
+		"WIS"
+	],
+	"skills": [
+		"Investigation",
+		"Persuasion"
+	],
+	"tools": [
+		"One Artisan's Tools"
+	],
+	"feats": [
+		"Crafter"
+	],
+	"request_id": "a5076ae5-aef0-48c1-8dcf-d8e1f23ab497",
+	"game_id": "errotin",
+	"description": "a sad soul",
+	"schema_version": "1.0.0"
+}

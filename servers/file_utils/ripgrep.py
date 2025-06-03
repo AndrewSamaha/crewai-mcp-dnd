@@ -1,6 +1,9 @@
 import subprocess
 from typing import List, Dict
 import json
+import os
+from typing import Optional
+
 
 BASE_PATH="output/"
 
@@ -36,6 +39,29 @@ def run_ripgrep(query: str, search_path: str = './output') -> List[Dict[str, str
         matching_str = line.split('\t')[1]
         matches.append({'file': filename, 'line': matching_str.strip()})
 
+    return matches
+
+
+
+def find_entity_by_id(entity_id: str, game_id: Optional[str] = None, entity_type: Optional[str] = None, base_path: str = "output") -> list:
+    """
+    Find entities by their id, searching for files matching the pattern:
+    output/GAME_ID/ENTITY_TYPE/NAME.DESCRIPTION.ENTITY_ID.json
+    Returns a list of file paths that match the entity_id.
+    """
+    matches = []
+    # Build the search directory
+    search_dir = base_path
+    if game_id:
+        search_dir = os.path.join(search_dir, game_id)
+    if entity_type:
+        search_dir = os.path.join(search_dir, entity_type)
+    if not os.path.isdir(search_dir):
+        return []
+    for root, dirs, files in os.walk(search_dir):
+        for fname in files:
+            if fname.endswith(f".{entity_id}.json"):
+                matches.append(os.path.join(root, fname))
     return matches
 
 def find_entities_fn(search_query: str, game_id: str, entity_type: str = "", search_path: str = './output') -> List[Dict[str, str]]:

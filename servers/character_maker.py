@@ -6,6 +6,8 @@ This server provides character creation operations as tools that can be discover
 from mcp.server.fastmcp import FastMCP
 from typing import Optional
 from character_creator.character import build_random_character
+from file_utils.ripgrep import find_entity_by_id
+import json
 
 mcp = FastMCP("Character")
 
@@ -57,7 +59,7 @@ def set_personality_profile(
     game_id: str,
     character_id: str,
     personality_profile: str
-) -> tuple[str, str]:
+) -> dict | str:
     """Set the personality profile of the character.
     
     Args:
@@ -66,11 +68,16 @@ def set_personality_profile(
         character_id (str): The ID of the character to set the personality profile for.
         personality_profile (str): The personality profile of the character.
     Returns:
-        tuple[str, str]: The character ID and the personality profile.
+        dict | str: The character dictionary with the new personality_profile field set, or an error message.
     """
-    # character = get_game_entity_by_id(request_id, game_id, character_id)
-    # character["personality_profile"] = personality_profile
-    return (character_id, personality_profile)
+    matches = find_entity_by_id(character_id, game_id, "character")
+    if matches:
+        character = json.load(open(matches[0]))
+        character["personality_profile"] = personality_profile
+        with open(matches[0], "w") as f:
+            json.dump(character, f)
+        return character
+    return "ERROR: No game entity found with that id."
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")

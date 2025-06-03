@@ -1,0 +1,41 @@
+{
+	"id": "fbe4de4f-c952-4e38-86ce-da1348d8bca6",
+	"personality_profile": null,
+	"current_goal": null,
+	"entity_type": "character",
+	"name": null,
+	"race": "Tiefling",
+	"class": "Monk",
+	"background": "Noble",
+	"level": 1,
+	"proficiency_bonus": 2,
+	"cr": 1,
+	"ability_scores": {
+		"STR": 15,
+		"DEX": 13,
+		"CON": 12,
+		"INT": 13,
+		"WIS": 8,
+		"CHA": 17
+	},
+	"max_hp": 9,
+	"ac": 10,
+	"saving_throws": [
+		"DEX",
+		"STR"
+	],
+	"skills": [
+		"History",
+		"Persuasion"
+	],
+	"tools": [
+		"One Gaming Set"
+	],
+	"feats": [
+		"Skilled"
+	],
+	"request_id": "66375d85-ca2e-4e9f-949d-98cb3900f2be",
+	"game_id": "errotin",
+	"description": "a old life",
+	"schema_version": "1.0.0"
+}
