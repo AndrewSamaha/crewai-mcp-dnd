@@ -1,0 +1,31 @@
+{
+  "id": "c8f75c53-864f-4797-b9fe-caa99225e379",
+  "personality_profile": "Leefleabtee embodies a fiery spirit beneath a rugged exterior, driven by an unwavering loyalty to protect his friends and kin. Yet, his stubborn pride often leads him into confrontations he could avoid, leaving him vulnerable to manipulation from those who exploit his fierce sense of honor.",
+  "current_goal": null,
+  "entity_type": "character",
+  "name": "Leefleabtee",
+  "race": "Dwarf",
+  "class": "Wizard",
+  "background": "Guard",
+  "level": 1,
+  "proficiency_bonus": 2,
+  "cr": 1,
+  "ability_scores": {
+    "STR": 12,
+    "DEX": 15,
+    "CON": 10,
+    "INT": 15,
+    "WIS": 12,
+    "CHA": 13
+  },
+  "max_hp": 6,
+  "ac": 12,
+  "saving_throws": ["INT", "WIS"],
+  "skills": ["Athletics", "Perception"],
+  "tools": ["One Gaming Set"],
+  "feats": ["Alert"],
+  "request_id": "174d5887-d76e-4212-ba4b-b231f1fbf832",
+  "game_id": "errotin",
+  "description": "a brawler",
+  "schema_version": "1.0.0"
+}

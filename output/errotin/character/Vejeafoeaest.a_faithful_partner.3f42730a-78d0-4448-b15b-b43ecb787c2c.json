@@ -1,0 +1,31 @@
+{
+  "id": "3f42730a-78d0-4448-b15b-b43ecb787c2c",
+  "personality_profile": "Vejeafoeaest radiates confidence, driven by an unwavering loyalty to friends and a desire for acceptance. Yet, beneath the vibrant performances lies a fear of being abandoned, making vulnerability a constant battle.",
+  "current_goal": null,
+  "entity_type": "character",
+  "name": "Vejeafoeaest",
+  "race": "Dragonborn",
+  "class": "Sorcerer",
+  "background": "Entertainer",
+  "level": 1,
+  "proficiency_bonus": 2,
+  "cr": 1,
+  "ability_scores": {
+    "STR": 16,
+    "DEX": 14,
+    "CON": 8,
+    "INT": 10,
+    "WIS": 12,
+    "CHA": 18
+  },
+  "max_hp": 5,
+  "ac": 12,
+  "saving_throws": ["CHA", "CON"],
+  "skills": ["Acrobatics", "Performance"],
+  "tools": ["One Musical Instrument"],
+  "feats": ["Musician"],
+  "request_id": "a902746e-9ae8-4d2b-ab19-a4d229fda109",
+  "game_id": "errotin",
+  "description": "a faithful partner",
+  "schema_version": "1.0.0"
+}

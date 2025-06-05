@@ -1,0 +1,31 @@
+{
+  "id": "595d90dc-2452-4cd5-8e50-aea0a1f17f5c",
+  "personality_profile": "Bruaplueshee is a cunning and greedy sociopath, driven by an insatiable desire for wealth and power. He forges fleeting connections with others, seeing them merely as tools to further his ambitions, yet harbors a deep-seated fear of vulnerability that makes him overly suspicious of genuine affection.",
+  "current_goal": null,
+  "entity_type": "character",
+  "name": "Bruaplueshee",
+  "race": "Human",
+  "class": "Wizard",
+  "background": "Farmer",
+  "level": 1,
+  "proficiency_bonus": 2,
+  "cr": 1,
+  "ability_scores": {
+    "STR": 13,
+    "DEX": 11,
+    "CON": 16,
+    "INT": 16,
+    "WIS": 10,
+    "CHA": 15
+  },
+  "max_hp": 9,
+  "ac": 10,
+  "saving_throws": ["INT", "WIS"],
+  "skills": ["Animal Handling", "Nature"],
+  "tools": ["Carpenter's Tools"],
+  "feats": ["Tough"],
+  "request_id": "491d8792-453f-4038-a85d-5a13f61044a8",
+  "game_id": "errotin",
+  "description": "a greedy sociopath",
+  "schema_version": "1.0.0"
+}
