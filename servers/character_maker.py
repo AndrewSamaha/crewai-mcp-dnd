@@ -5,7 +5,7 @@ This server provides character creation operations as tools that can be discover
 
 from mcp.server.fastmcp import FastMCP
 from typing import Optional
-from character_creator.character import build_random_character
+from character_creator.character import build_random_character, log
 from file_utils.ripgrep import find_entity_by_id
 import json
 
@@ -46,6 +46,7 @@ def make_character(
     # charisma (Optional[int]): The charisma of the creature. If None, will be determined from the description.
     # personality_profile (Optional[str]): The personality profile of the creature. If None, will be determined from the description.
     # current_goal (Optional[str]): The current goal of the creature. If None, will be determined from the description.
+    log({"name": name}, "Tool Calledmake_character - name")
     character = build_random_character(name=name, description=description, request_id=request_id, game_id=game_id)
     if level and level > 0:
         for _ in range(level):

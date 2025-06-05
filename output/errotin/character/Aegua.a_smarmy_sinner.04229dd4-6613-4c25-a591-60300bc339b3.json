@@ -1,0 +1,31 @@
+{
+  "id": "04229dd4-6613-4c25-a591-60300bc339b3",
+  "personality_profile": "Aegua is a charming rogue with a silver tongue and a penchant for mischief, driven by an insatiable desire for freedom on the open seas. Despite his charisma, he struggles with guilt from past betrayals, haunted by the ghosts of those he has wronged. His heart races for adventure, yet his conscience weighs heavy, creating a constant internal conflict.",
+  "current_goal": null,
+  "entity_type": "character",
+  "name": "Aegua",
+  "race": "Elf",
+  "class": "Rogue",
+  "background": "Sailor",
+  "level": 1,
+  "proficiency_bonus": 2,
+  "cr": 1,
+  "ability_scores": {
+    "STR": 14,
+    "DEX": 15,
+    "CON": 8,
+    "INT": 14,
+    "WIS": 11,
+    "CHA": 15
+  },
+  "max_hp": 7,
+  "ac": 12,
+  "saving_throws": ["DEX", "INT"],
+  "skills": ["Acrobatics", "Perception"],
+  "tools": ["Navigator's Tools"],
+  "feats": ["Tavern Brawler"],
+  "request_id": "1fa3c911-f215-45eb-ab09-b957e4f88e4d",
+  "game_id": "errotin",
+  "description": "a smarmy sinner",
+  "schema_version": "1.0.0"
+}

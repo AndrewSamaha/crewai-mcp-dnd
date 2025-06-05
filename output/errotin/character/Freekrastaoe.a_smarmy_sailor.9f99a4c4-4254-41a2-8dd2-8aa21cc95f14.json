@@ -1,0 +1,31 @@
+{
+  "id": "9f99a4c4-4254-41a2-8dd2-8aa21cc95f14",
+  "personality_profile": "Freekrastaoe is a boisterous Dragonborn barbarian, whose smarmy demeanor masks a heart devoted to the teachings of his faith. He thrives on camaraderie and revels in the chaos of battle, yet he struggles with his temper, often letting pride cloud his judgment, which can alienate allies when they need him most.",
+  "current_goal": null,
+  "entity_type": "character",
+  "name": "Freekrastaoe",
+  "race": "Dragonborn",
+  "class": "Barbarian",
+  "background": "Acolyte",
+  "level": 1,
+  "proficiency_bonus": 2,
+  "cr": 1,
+  "ability_scores": {
+    "STR": 15,
+    "DEX": 15,
+    "CON": 12,
+    "INT": 9,
+    "WIS": 15,
+    "CHA": 12
+  },
+  "max_hp": 13,
+  "ac": 13,
+  "saving_throws": ["CON", "STR"],
+  "skills": ["Insight", "Religion"],
+  "tools": ["Calligrapher's Supplies"],
+  "feats": ["Magic Initiate (Cleric)"],
+  "request_id": "03efcd26-0775-40aa-b215-4654645158d3",
+  "game_id": "errotin",
+  "description": "a smarmy sailor",
+  "schema_version": "1.0.0"
+}

@@ -15,6 +15,7 @@ import json
 import uuid
 import os
 import dotenv
+from datetime import datetime
 
 
 # ---------- Helpers --------------------------------------------------
@@ -73,6 +74,15 @@ BACKGROUNDS: Dict[str, Dict] = {
 
 SCHEMA_VERSION = "1.0.0"
 
+def log(data, label):
+    output = {
+        "date": datetime.now().isoformat(),
+        "label": label,
+        "data": data,
+    }
+    with open("character_creator.log", "a") as f:
+        f.write(json.dumps(output) + "  \n")
+
 # ---------- Character class -----------------------------------------
 class Character:
     entity_type = "character"  # Class-level constant
@@ -100,12 +110,15 @@ class Character:
         self.schema_version = SCHEMA_VERSION
         self.personality_profile = personality_profile
         self.current_goal = current_goal
+        log(dict({ "name": name }), "Character.init - input name")
+        log(self.as_dict(), "Character.init - inited char")
 
     def get_personality_profile(self):
         return self.personality_profile
 
     def set_personality_profile(self, value: str):
         self.personality_profile = value
+        log(self.as_dict(), "personality_profile")
 
     def get_current_goal(self):
         return self.current_goal
@@ -236,7 +249,11 @@ class Character:
 
 # ---------- Builder --------------------------------------------------
 
-def build_random_character(name: str = FantasyNameGenerator().generate_name(), rng=random, request_id: str = str(uuid.uuid4()), game_id: str = None, description: str = None, cr: int = None, personality_profile: str = None, current_goal: str = None) -> Character:
+def build_random_character(name: str = None, rng=random, request_id: str = str(uuid.uuid4()), game_id: str = None, description: str = None, cr: int = None, personality_profile: str = None, current_goal: str = None) -> Character:
+    log({"name": name}, "build_random_character - name")
+    if name is None:
+        name = FantasyNameGenerator().generate_name()
+        log({"name": name}, "build_random_character - calling FantasyNameGenerator")
     array = rng.sample([15, 14, 13, 12, 10, 8], k=6)
     base = dict(zip(ABILITIES, array))
     pc = Character(name, base, request_id=request_id, game_id=game_id, description=description, personality_profile=personality_profile, current_goal=current_goal)
