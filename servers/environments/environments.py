@@ -37,6 +37,71 @@ class Environment:
         game_id: Optional[str] = None,
         description: Optional[str] = None,
     ):
+        """
+        Create a new **Environment** instance.
+
+        Parameters
+        ----------
+        name : str
+            Human-readable label for the location (“Shadowed Armory”).
+        kind : str
+            Format **"<Open|Closed>:<Subtype>"**;  
+            examples: ``"Closed:DungeonRoom"``, ``"Open:Forest"``.
+        summary : str
+            One-sentence flavor snapshot (“Dusty dwarven armory littered with broken blades”).
+        ambience : dict[str, str], optional
+            Mini-triad of atmosphere adjectives with recommended keys  
+            ``{"light": "...", "sound": "...", "smell": "..."}``.  
+            Omit keys you don't care about.
+        landmarks : list[str], optional
+            2-5 notable interactables or terrain features (“weapon rack”, “lone oak tree”).
+        creatures : list[str], optional
+            IDs or names for monsters/NPCs present; pulled into your combat subsystem elsewhere.
+        threats : list[str], optional
+            Brief hazard descriptors (“loose stones (DC 12 Dex, 2d6)”).
+        loot_or_clues : list[str], optional
+            Things discoverable here—treasure, diary pages, healing springs, etc.
+        state : dict[str, bool], optional
+            Key-value switches that may flip during play (``{"door_open": False}``).
+        hooks : str, optional
+            Why this place matters right now (“needed to secure dwarf alliance quest”).
+        closed_spec : dict[str, str], optional
+            ONLY for **Closed** scenes; minimal tactical extras.<br>
+            Recommended keys: ``shape``, ``exits``, ``ceiling_height``.
+        open_spec : dict[str, str], optional
+            ONLY for **Open** scenes; scope & terrain hints.<br>
+            Recommended keys: ``scope``, ``terrain_tags``, ``edges``.
+        request_id : str, optional
+            Correlates this environment to an inbound API or agent request.
+        game_id : str, optional
+            Which campaign / session this belongs to.
+        description : str, optional
+            Free-form long description or GM notes.
+
+        Notes
+        -----
+        * ``entity_type`` is fixed to *"environment"* so downstream code can branch on type.
+        * A UUID is generated automatically and stored in ``self.id``.
+        * The **schema_version** attribute lets you migrate data later without breaking saves.
+
+        Examples
+        --------
+        >>> env = Environment(
+        ...     name="Wind-Swept Hill",
+        ...     kind="Open:Hill",
+        ...     summary="Grassy ridge overlooking farmland.",
+        ...     ambience={"light": "bright", "sound": "whistling wind", "smell": "fresh hay"},
+        ...     landmarks=["lone oak tree", "stone cairn"],
+        ...     threats=["sudden gusts (DC 12 Dex, may knock prone)"],
+        ...     open_spec={
+        ...         "scope": "≈250 ft radius",
+        ...         "terrain_tags": ["grassy", "steep eastern slope"],
+        ...         "edges": ["forest edge (north)", "dusty road (south)"],
+        ...     },
+        ... )
+        >>> print(env)
+        Wind-Swept Hill (Open:Hill) - Grassy ridge overlooking farmland.
+        """
         self.id = str(uuid.uuid4())
         self.name = name
         self.kind = kind

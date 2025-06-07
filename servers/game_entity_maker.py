@@ -1,13 +1,15 @@
-"""A simple character creation MCP server that implements the Model Context Protocol.
+"""A simple MCP server creates game entities like characters and environments.
 
-This server provides character creation operations as tools that can be discovered and used by MCP clients.
+This server provides character and environment creation operations as tools that can be discovered and used by MCP clients.
 """
 
 from mcp.server.fastmcp import FastMCP
 from typing import Optional
 from character_creator.character import build_random_character, log
+from environments.environments import Environment
 from file_utils.ripgrep import find_entity_by_id
 import json
+from typing import Dict, List
 
 mcp = FastMCP("Character")
 
@@ -80,6 +82,97 @@ def set_personality_profile(
         return character
     return "ERROR: No game entity found with that id."
 
+@mcp.tool()
+def create_environment(
+    request_id: str,
+    game_id: str,
+    name: str,
+    kind: str,
+    summary: str,
+    ambience: Optional[Dict[str, str]] = None,
+    landmarks: Optional[List[str]] = None,
+    creatures: Optional[List[str]] = None,
+    threats: Optional[List[str]] = None,
+    loot_or_clues: Optional[List[str]] = None,
+    state: Optional[Dict[str, bool]] = None,
+    hooks: Optional[str] = None,
+    closed_spec: Optional[Dict[str, str]] = None,
+    open_spec: Optional[Dict[str, str]] = None,
+    description: Optional[str] = None,
+) -> dict:
+    """
+    Factory endpoint for agents to spawn a new **Environment** object.
+
+    Parameters (match call signature)
+    ---------------------------------
+    request_id : str
+        Correlates this invocation to the inbound request or message.
+    game_id : str
+        Campaign / session identifier.
+    name : str
+        Human-readable label (“Shadowed Armory”).
+    kind : str
+        ``"<Open|Closed>:<Subtype>"`` e.g. ``"Closed:DungeonRoom"`` or ``"Open:Forest"``.
+    summary : str
+        One-sentence flavor (“Dusty dwarven armory littered with broken blades”).
+    ambience : dict[str, str], optional
+        Lite atmosphere triad with keys ``light``, ``sound``, ``smell``.
+    landmarks, creatures, threats, loot_or_clues : list[str], optional
+        World-objects, NPC IDs, hazard blurbs, and discoverables.
+    state : dict[str, bool], optional
+        Flip-able flags that track live changes (``{"door_open": false}``).
+    hooks : str, optional
+        Why this location matters to the plot right now.
+    closed_spec / open_spec : dict[str, str], optional
+        Tactical add-ons — only include the one that matches *kind*.
+    description : str, optional
+        Free-form GM notes.
+
+    Returns
+    -------
+    dict
+        JSON-serialisable representation of the new environment (same as ``Environment.as_dict()``).
+
+    Examples
+    --------
+    >>> env_dict = create_environment(
+    ...     request_id="req-123",
+    ...     game_id="game-42",
+    ...     name="Wind-Swept Hill",
+    ...     kind="Open:Hill",
+    ...     summary="Grassy ridge overlooking farmland."
+    ... )
+    """
+    # ── Minimal validation so the agent can't generate illegal payloads ─────────
+    if not kind.lower().startswith(("open:", "closed:")):
+        raise ValueError('kind must start with "Open:" or "Closed:".')
+
+    if ambience:
+        for k in ambience:
+            if k not in {"light", "sound", "smell"}:
+                raise ValueError(f"ambience key '{k}' is invalid; use light/sound/smell.")
+
+    # ── Build the environment object ───────────────────────────────────────────
+    environment = Environment(
+        name=name,
+        kind=kind,
+        summary=summary,
+        ambience=ambience,
+        landmarks=landmarks,
+        creatures=creatures,
+        threats=threats,
+        loot_or_clues=loot_or_clues,
+        state=state,
+        hooks=hooks,
+        closed_spec=closed_spec,
+        open_spec=open_spec,
+        request_id=request_id,
+        game_id=game_id,
+        description=description,
+    )
+
+    return environment.as_dict()
+
+
 if __name__ == "__main__":
     mcp.run(transport="stdio")
-

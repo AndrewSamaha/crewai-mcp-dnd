@@ -1,0 +1,34 @@
+{
+	"id": "3d0dc1e1-89de-497c-9d43-9ba9b8442744",
+	"entity_type": "environment",
+	"name": "Eataiouth's Kitchen",
+	"kind": "Closed:Room",
+	"summary": "A cozy yet chaotic kitchen filled with the aromas of various spices and the clatter of cooking utensils.",
+	"ambience": {
+		"light": "Warm, flickering candlelight",
+		"sound": "The bubbling of pots and the crackling of a fire",
+		"smell": "Savory herbs and freshly baked bread"
+	},
+	"landmarks": [
+		"A large wooden table covered in ingredients",
+		"An ancient stone hearth with a roaring fire",
+		"Shelves lined with jars of colorful spices",
+		"A window overlooking a lush herb garden"
+	],
+	"creatures": [
+		"A mischievous cat that steals food when no one is looking",
+		"A friendly house elf who offers guidance and assistance"
+	],
+	"threats": [
+		"A hidden trapdoor leading to an underground cellar filled with dangerous creatures",
+		"Occasional kitchen accidents that can cause minor chaos"
+	],
+	"loot_or_clues": [
+		"A recipe book containing forgotten spells disguised as meals",
+		"A hidden stash of rare ingredients in a secret compartment"
+	],
+	"hooks": "The kitchen is a hub of activity, with rumors of a magical ingredient that can enhance potions hidden somewhere within.",
+	"request_id": "445963d5-d703-4ef1-bc2c-8d0a949da4ec",
+	"game_id": "errotin",
+	"description": "Eataiouth's kitchen is a blend of rustic charm and magical intrigue. The large wooden table serves as the central point, cluttered with fresh produce and half-prepared dishes. The stone hearth radiates warmth, while shelves crammed with jars of exotic spices tell stories of distant"
+}
