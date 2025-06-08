@@ -6,6 +6,7 @@ This server provides JSON file operations as tools that can be discovered and us
 from mcp.server.fastmcp import FastMCP
 from file_utils.filename import make_filename
 from file_utils.ripgrep import find_entities_fn
+from utils.logging import log
 import json
 import os
 
@@ -66,11 +67,14 @@ def find_entities(request_id: str, game_id: str, search_query: str, entity_type:
         request_id (str): The ID of the request.
         game_id (str): The ID of the game.
         search_query (str): The search query to use.
-        entity_type (str, optional): The type of the entity to find. Defaults to "" (matches any type).
+        entity_type (str, optional): The type of the entity to find (character or environment). Generally, this should be left empty in order to keep the story's cannon consistent. Defaults to "" (matches any type).
     Returns:
         list: A list of entities that match the given search query and entity_type.
     """
-    return find_entities_fn(search_query, game_id, entity_type)
+    log({"entity_type": entity_type, "search_query": search_query, "game_id": game_id, "request_id": request_id}, "find_entities", "input")
+    result = find_entities_fn(search_query, game_id, entity_type)
+    log({"result": result}, "find_entities", "output")
+    return result
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")

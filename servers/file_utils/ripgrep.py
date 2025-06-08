@@ -17,9 +17,11 @@ def run_ripgrep(query: str, search_path: str = './output') -> List[Dict[str, str
     Returns:
         list of dict: Each dict has 'file' (str) and 'line' (str) keys.
     """
+    #query = f"/{query}/i"
+    print(f"Running ripgrep with query: '{query}' and search_path: '{search_path}'")
     try:
         result = subprocess.run(
-            ['rg', query, search_path],
+            ['rg', "-i", query, search_path],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
@@ -30,14 +32,13 @@ def run_ripgrep(query: str, search_path: str = './output') -> List[Dict[str, str
         output = e.stdout
         if not output:
             return []
-
+    
     matches = []
     for line in output.splitlines():
-        
-        # split line on tab
-        filename = line.split('\t')[0][:-1]
-        matching_str = line.split('\t')[1]
-        matches.append({'file': filename, 'line': matching_str.strip()})
+        tab_split_line = line.split(':')
+        filename = str(tab_split_line[0]).strip().replace("\t", "").replace(" ", "")
+        matching_line = str(tab_split_line[1:]).strip().replace("\t", "").replace(" ", "")
+        matches.append({'file': filename, 'line': matching_line})
 
     return matches
 
@@ -74,11 +75,13 @@ def find_entities_fn(search_query: str, game_id: str, entity_type: str = "", sea
     Returns:
         list of dict: Each dict has 'file' (str) and 'line' (str) keys.
     """
+    
     if entity_type:
         search_path = BASE_PATH + game_id + "/" + entity_type + "/"
     else:
         search_path = BASE_PATH + game_id + "/"
     
+    found_entity_ids = []
     matches = run_ripgrep(search_query, search_path)
     if matches:
         entities = []
@@ -86,6 +89,9 @@ def find_entities_fn(search_query: str, game_id: str, entity_type: str = "", sea
             entity = json.load(open(match['file']))
             # if entity_type and entity["entity_type"] != entity_type:
             #     continue
+            if entity["id"] in found_entity_ids:
+                continue
+            found_entity_ids.append(entity["id"])
             entities.append(entity)
         return entities
     return "No entities found matching search query: {} and entity_type: {}, search_path: {}, matches_result: {}".format(search_query, entity_type, search_path, matches)

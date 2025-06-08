@@ -1,1 +1,31 @@
-{"id": "924c2dce-33a7-48a0-90ef-3ac7bee36070", "personality_profile": "Eetaiouth's bright optimism shines through the shadows of his criminal past, as he yearns for a world where magic can mend wounds and unite hearts. Yet, beneath his hopeful exterior lies a vulnerability\u2014an inability to face harsh realities, often leading him to overlook the dangers lurking just beyond his cheerful fa\u00e7ade.", "current_goal": null, "entity_type": "character", "name": "Eetaiouth", "race": "Half-Orc", "class": "Wizard", "background": "Criminal", "level": 1, "proficiency_bonus": 2, "cr": 1, "ability_scores": {"STR": 14, "DEX": 8, "CON": 17, "INT": 15, "WIS": 14, "CHA": 10}, "max_hp": 9, "ac": 9, "saving_throws": ["INT", "WIS"], "skills": ["Sleight of Hand", "Stealth"], "tools": ["Thieves' Tools"], "feats": ["Alert"], "request_id": "8ca424ec-cb9d-4f9c-879f-747b4a73d255", "game_id": "errotin", "description": "an optimist", "schema_version": "1.0.0"}
+{
+  "id": "924c2dce-33a7-48a0-90ef-3ac7bee36070",
+  "personality_profile": "Eetaiouth's bright optimism shines through the shadows of his criminal past, as he yearns for a world where magic can mend wounds and unite hearts. Yet, beneath his hopeful exterior lies a vulnerability\u2014an inability to face harsh realities, often leading him to overlook the dangers lurking just beyond his cheerful fa\u00e7ade.",
+  "current_goal": null,
+  "entity_type": "character",
+  "name": "Eetaiouth",
+  "race": "Half-Orc",
+  "class": "Wizard",
+  "background": "Criminal",
+  "level": 1,
+  "proficiency_bonus": 2,
+  "cr": 1,
+  "ability_scores": {
+    "STR": 14,
+    "DEX": 8,
+    "CON": 17,
+    "INT": 15,
+    "WIS": 14,
+    "CHA": 10
+  },
+  "max_hp": 9,
+  "ac": 9,
+  "saving_throws": ["INT", "WIS"],
+  "skills": ["Sleight of Hand", "Stealth"],
+  "tools": ["Thieves' Tools"],
+  "feats": ["Alert"],
+  "request_id": "8ca424ec-cb9d-4f9c-879f-747b4a73d255",
+  "game_id": "errotin",
+  "description": "an optimist",
+  "schema_version": "1.0.0"
+}

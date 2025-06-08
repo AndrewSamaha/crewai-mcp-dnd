@@ -1,0 +1,33 @@
+{
+	"id": "482d6330-0057-4454-818b-8b14d2a1e8d9",
+	"entity_type": "environment",
+	"name": "Eetaiouth's Bedroom",
+	"kind": "Closed:Bedroom",
+	"summary": "A cozy yet chaotic bedroom filled with magical artifacts and personal belongings.",
+	"ambience": {
+		"light": "Soft, warm glow from flickering candles.",
+		"sound": "The gentle rustle of parchment and the faint crackle of magical energy.",
+		"smell": "A blend of herbal incense and old parchment."
+	},
+	"landmarks": [
+		"A large, intricately carved wooden bed draped in deep blue linens.",
+		"An old wooden desk cluttered with spellbooks and potion ingredients.",
+		"A series of shelves lined with peculiar artifacts and trinkets collected from Eetaiouth's travels."
+	],
+	"creatures": [
+		"A small, mischievous imp that flits about, occasionally helping or hindering Eetaiouth."
+	],
+	"threats": [
+		"A hidden magical trap that activates if intruders disturb the bed.",
+		"Waking the imp may lead to unexpected chaos."
+	],
+	"loot_or_clues": [
+		"A hidden compartment in the desk containing a map to Eetaiouth's secret stash of potions.",
+		"A mysterious tome that reveals Eetaiouth's connection to the magical ingredient mentioned in local rumors."
+	],
+	"state": {},
+	"hooks": "This bedroom is a treasure trove of secrets waiting to be uncovered, providing insight into Eetaiouth's character and his ties to the local community.",
+	"request_id": "91fa7279-4b20-43f7-b3ed-e4129ce89523",
+	"game_id": "errotin",
+	"description": "Eetaiouth's bedroom is a reflection of his personality; warm and inviting, yet chaotic. The soft, flickering candlelight casts dancing shadows on the walls, revealing old tapestries depicting ancient magical battles. The air is thick with the aroma of herbs and incense, creating a calming yet curious atmosphere. Every corner of the room tells a story - from the cluttered desk where Eetai"
+}

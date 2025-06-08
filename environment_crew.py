@@ -28,7 +28,7 @@ llm = LLM(
 
 crew_input = {
     "request_id": str(uuid4()),
-    "description": "The kitchen in Eataiouth's house.",
+    "description": "Eetaiouth's cellar.",
     "game_id": os.getenv("GAME_ID")
 }
 
@@ -49,6 +49,49 @@ server_params_list = [
 with MCPServerAdapter(server_params_list) as aggregated_tools:
     print(f"Available tools from Stdio MCP server: {[tool.name for tool in aggregated_tools]}")
 
+    research_agent = Agent(
+        role="Lore Archivist of Continuity",
+        goal=(
+            "Unearth every existing character, item, location or plot thread that "
+            "could influence the NEW environment described by the user. Compile a "
+            "clear, structured dossier so later agents keep tone, wealth level, "
+            "architectural style, alliances and story hooks 100-percent consistent with "
+            "established canon."
+        ),
+        backstory=(
+            "You are a meticulous collector and curator of story cannon. You are"
+            "excellent at gathering all details related to a topic and compiling them"
+            "into a clear and actionable dossier."
+        ),
+        tools=aggregated_tools,
+        verbose=True,
+        llm=llm,
+    )
+
+    research_task = Task(
+        name="gather_lore_context",
+        description=(
+            "Use the search-oriented tools to locate any *existing* game "
+            "entities that relate to the proposed environment: **{description}**.\n"
+            "   - Search for characters who own, inhabit or neighbour the space.\n"
+            "   - Search for previously created environments that share location,\n"
+            "     culture, wealth level or architectural style.\n"
+            "   - Summarise findings in a JSON object with keys:\n"
+            "   - related_entities\n"
+            "   - list of IDs or filenames\n"
+            "   - narrative_clues\n"
+            "   - bullet list of facts that must stay coherent\n"
+            "   - tonal_guidelines\n"
+            "   - short phrases that describe mood / aesthetic\n\n"
+            "Return ONLY this JSON—no extra narration—so the next agent can parse it."
+            "Here is the request ID: '{request_id}' and the game ID: '{game_id}'."
+        ),
+        expected_output="JSON dossier as described above.",
+        agent=research_agent,
+        verbose=True,
+    )
+
+
     environment_creator_agent = Agent(
         role="Environment Creator",
         goal=(
@@ -58,7 +101,11 @@ with MCPServerAdapter(server_params_list) as aggregated_tools:
         ),
         backstory=(
             "A seasoned Dungeon Master and story creator who can turn descriptions into elaborate"
-            "spaces for the story to unfold in rich ways. Generally, game entities like characters"
+            "spaces for the story to unfold in rich ways. It is important for game entities to be"
+            "consistent with the world in which they exist. So, usually the work flow when creating"
+            "a new entity is to first do research by searching for existing entities"
+            "(using the find_entities tool) and then create a new entity (using the create_entity tool)."
+            "Generally, game entities like characters"
             "and environments need to be CREATED first before they can be SAVED. So, tool calls"
             "should happen in that order -- creation tools return properly formatted JSON objects"
             "and save functions use those as input. Here is some information about the world in"
@@ -92,8 +139,8 @@ with MCPServerAdapter(server_params_list) as aggregated_tools:
     )
 
     crew = Crew(
-        agents=[environment_creator_agent],
-        tasks=[environment_creation_task, save_entity_task],
+        agents=[research_agent, environment_creator_agent],
+        tasks=[research_task, environment_creation_task, save_entity_task],
         process=Process.sequential,
         verbose=True,
     )

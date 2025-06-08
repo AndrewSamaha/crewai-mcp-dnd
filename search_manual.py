@@ -15,5 +15,8 @@ search_query = input("What do you want to search for? ")
 print(f"Searching for {search_query} in {os.getenv("GAME_ID")}")
 entities = find_entities_fn(search_query, os.getenv("GAME_ID"))
 
-print(json.dumps(entities, indent=2))
+try:
+    print(json.dumps(entities, indent=2))
+except:
+    print(entities)
 
