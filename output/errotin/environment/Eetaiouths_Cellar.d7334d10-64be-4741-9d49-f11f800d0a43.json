@@ -1,0 +1,35 @@
+{
+	"id": "d7334d10-64be-4741-9d49-f11f800d0a43",
+	"entity_type": "environment",
+	"name": "Eetaiouth's Cellar",
+	"kind": "Closed:Cellar",
+	"summary": "A warm, inviting cellar filled with the chaotic remnants of culinary experiments and magical concoctions.",
+	"ambience": {
+		"light": "Flickering candlelight casting dancing shadows on the stone walls",
+		"sound": "The gentle bubbling of potions and the occasional clatter of glass jars",
+		"smell": "A mix of herbs, spices, and something distinctly magical"
+	},
+	"landmarks": [
+		"A large wooden table cluttered with ingredients and arcane tools",
+		"Shelves lined with jars of colorful ingredients and oddities",
+		"An ancient recipe book resting open, pages fluttering as if alive"
+	],
+	"creatures": [
+		"A mischievous imp named Zilly, always ready to play tricks on visitors"
+	],
+	"threats": [
+		"Potion mishaps that can lead to unpredictable magical effects",
+		"The neighbor's curious gaze peering through the cellar's tiny window"
+	],
+	"loot_or_clues": [
+		"A hidden compartment in the table containing a rare spice that enhances magical abilities",
+		"A spell disguised as a recipe, waiting to be discovered by the clever adventurer"
+	],
+	"state": {
+		"potion_active": false
+	},
+	"hooks": "Eetaiouth is rumored to have discovered a recipe that could change the course of magic in the realm; finding it could lead to adventure or disaster.",
+	"request_id": "6d1091dc-19c7-4b80-9be0-12ce7bf1da2f",
+	"game_id": "errotin",
+	"description": "Eetaiouth's cellar is a chaotic yet inviting space where the warmth of culinary creativity meets the unpredictable nature of magic. The walls are lined with shelves overflowing with jars containing peculiar ingredients, while the air is thick with the enticing aroma of spices and herbs. A flickering candle casts soft light, illuminating an array of potion bottles, some bubbling with unknown liquids. An ancient"
+}

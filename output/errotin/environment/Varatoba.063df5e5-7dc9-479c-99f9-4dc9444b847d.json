@@ -1,0 +1,36 @@
+{
+	"id": "063df5e5-7dc9-479c-99f9-4dc9444b847d",
+	"entity_type": "environment",
+	"name": "Varatoba",
+	"kind": "Open:Village",
+	"summary": "A quaint village nestled between lush forests and rolling hills, known for its healing well and vibrant community spirit.",
+	"ambience": {
+		"light": "Soft sunlight filtering through the trees.",
+		"sound": "The gentle murmur of the healing well and distant birdsong.",
+		"smell": "A mix of wildflowers and freshly baked bread."
+	},
+	"landmarks": [
+		"Healing Well",
+		"The Old Oak Tree",
+		"The Village Square"
+	],
+	"creatures": [
+		"Villagers",
+		"Wolves"
+	],
+	"threats": [
+		"Wolf Attacks",
+		"Mysterious Shadows in the Woods"
+	],
+	"loot_or_clues": [
+		"A potion from the healing well that grants temporary health.",
+		"A wolf pelt that could be used for trade or crafting.",
+		"Ancient runes found in the woods that tell tales of old."
+	],
+	"state": {},
+	"hooks": "The villagers are on edge due to recent wolf attacks, and rumors spread about the ancient woods harboring dangerous secrets.",
+	"request_id": "5681c811-389e-4b33-93fb-f856f1b592a8",
+	"game_id": "errotin",
+	"description": "Varatoba is a peaceful village with a rich folklore, where every home tells a story. The central square bustles with merchants selling their goods, while children play near the healing well known for its restorative properties. However, an undercurrent of fear has gripped the village as wolf attacks grow more frequent, casting a shadow over their tranquil lives. The villagers often whisper of the ancient woods, which are said to hold both treasures and terrors.",
+	"schema_version": 1
+}

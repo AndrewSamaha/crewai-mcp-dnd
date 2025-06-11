@@ -84,6 +84,7 @@ def log(data, label):
         f.write(json.dumps(output) + "  \n")
 
 # ---------- Character class -----------------------------------------
+# ToDo: Things to add to the next schema version: pronouns, hometown
 class Character:
     entity_type = "character"  # Class-level constant
     def __init__(self, name: str, base_scores: Dict[str, int] | None = None, request_id: str = None, game_id: str = None, description: str = None, personality_profile: str = None, current_goal: str = None):

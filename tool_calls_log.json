@@ -1,202 +1,375 @@
 {
-  "timestamp": "2025-06-10T08:34:27.796501",
-  "tool_name": "find_entities",
-  "label": "input",
-  "data": "Eetaiouth"
-}
-{
-  "timestamp": "2025-06-10T08:34:27.802869",
-  "tool_name": "find_entities",
-  "label": "output",
-  "data": [
-    {
-      "id": "3d0dc1e1-89de-497c-9d43-9ba9b8442744",
-      "entity_type": "environment",
-      "name": "Eetaiouth's Kitchen",
-      "kind": "Closed:Room",
-      "summary": "A cozy yet chaotic kitchen filled with the aromas of various spices and the clatter of cooking utensils.",
-      "ambience": {
-        "light": "Warm, flickering candlelight",
-        "sound": "The bubbling of pots and the crackling of a fire",
-        "smell": "Savory herbs and freshly baked bread"
-      },
-      "landmarks": [
-        "A large wooden table covered in ingredients",
-        "An ancient stone hearth with a roaring fire",
-        "Shelves lined with jars of colorful spices",
-        "A window overlooking a lush herb garden",
-        "The floor is old, cracked planks that were too expensive to replace"
-      ],
-      "creatures": [
-        "A mischievous cat that steals food when no one is looking",
-        "A spider has made a web in one of the broken planks of the floor"
-      ],
-      "threats": [
-        "Eetaiouth's neighbor is often outside within earshot of conversations"
-      ],
-      "loot_or_clues": [
-        "A recipe book containing forgotten spells disguised as meals",
-        "A hidden stash of rare ingredients in a secret compartment"
-      ],
-      "hooks": "The kitchen is a hub of activity, with rumors of a magical ingredient that can enhance potions hidden somewhere within.",
-      "request_id": "445963d5-d703-4ef1-bc2c-8d0a949da4ec",
-      "game_id": "errotin",
-      "description": "Eetaiouth's kitchen is a blend of rustic charm and magical intrigue. The large wooden table serves as the central point, cluttered with fresh produce and half-prepared dishes. The stone hearth radiates warmth, while shelves crammed with jars of exotic spices tell stories of distant"
-    },
-    {
-      "id": "924c2dce-33a7-48a0-90ef-3ac7bee36070",
-      "personality_profile": "Eetaiouth's bright optimism shines through the shadows of his criminal past, as he yearns for a world where magic can mend wounds and unite hearts. Yet, beneath his hopeful exterior lies a vulnerability\u2014an inability to face harsh realities, often leading him to overlook the dangers lurking just beyond his cheerful fa\u00e7ade.",
-      "current_goal": null,
-      "entity_type": "character",
-      "name": "Eetaiouth",
-      "race": "Half-Orc",
-      "class": "Wizard",
-      "background": "Criminal",
-      "level": 1,
-      "proficiency_bonus": 2,
-      "cr": 1,
-      "ability_scores": {
-        "STR": 14,
-        "DEX": 8,
-        "CON": 17,
-        "INT": 15,
-        "WIS": 14,
-        "CHA": 10
-      },
-      "max_hp": 9,
-      "ac": 9,
-      "saving_throws": [
-        "INT",
-        "WIS"
-      ],
-      "skills": [
-        "Sleight of Hand",
-        "Stealth"
-      ],
-      "tools": [
-        "Thieves' Tools"
-      ],
-      "feats": [
-        "Alert"
-      ],
-      "request_id": "8ca424ec-cb9d-4f9c-879f-747b4a73d255",
-      "game_id": "errotin",
-      "description": "an optimist",
-      "schema_version": "1.0.0"
-    }
-  ]
-}
-{
-  "timestamp": "2025-06-10T08:34:54.181807",
-  "tool_name": "find_entities",
-  "label": "input",
-  "data": "Eetaiouth"
-}
-{
-  "timestamp": "2025-06-10T08:34:54.194847",
-  "tool_name": "find_entities",
-  "label": "output",
-  "data": [
-    {
-      "id": "924c2dce-33a7-48a0-90ef-3ac7bee36070",
-      "personality_profile": "Eetaiouth's bright optimism shines through the shadows of his criminal past, as he yearns for a world where magic can mend wounds and unite hearts. Yet, beneath his hopeful exterior lies a vulnerability\u2014an inability to face harsh realities, often leading him to overlook the dangers lurking just beyond his cheerful fa\u00e7ade.",
-      "current_goal": null,
-      "entity_type": "character",
-      "name": "Eetaiouth",
-      "race": "Half-Orc",
-      "class": "Wizard",
-      "background": "Criminal",
-      "level": 1,
-      "proficiency_bonus": 2,
-      "cr": 1,
-      "ability_scores": {
-        "STR": 14,
-        "DEX": 8,
-        "CON": 17,
-        "INT": 15,
-        "WIS": 14,
-        "CHA": 10
-      },
-      "max_hp": 9,
-      "ac": 9,
-      "saving_throws": [
-        "INT",
-        "WIS"
-      ],
-      "skills": [
-        "Sleight of Hand",
-        "Stealth"
-      ],
-      "tools": [
-        "Thieves' Tools"
-      ],
-      "feats": [
-        "Alert"
-      ],
-      "request_id": "8ca424ec-cb9d-4f9c-879f-747b4a73d255",
-      "game_id": "errotin",
-      "description": "an optimist",
-      "schema_version": "1.0.0"
-    }
-  ]
-}
-{
-  "timestamp": "2025-06-10T08:50:14.546817",
+  "timestamp": "2025-06-11T08:47:37.198004",
   "tool_name": "find_entities",
   "label": "input",
   "data": {
-    "entity_type": "character",
-    "search_query": "Eetaiouth",
+    "entity_type": "",
+    "search_query": "Varatoba",
     "game_id": "errotin",
-    "request_id": "b9797b40-97ba-49e0-8bb6-6b5dcfc27c21"
+    "request_id": "d7e981d7-c625-4a50-8221-904a1d99386d"
   }
 }
 {
-  "timestamp": "2025-06-10T08:50:14.552434",
+  "timestamp": "2025-06-11T08:47:37.214317",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": "No entities found matching search query: Varatoba and entity_type: , search_path: output/errotin/, matches_result: []"
+  }
+}
+{
+  "timestamp": "2025-06-11T08:51:23.718663",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Varatoba",
+    "game_id": "errotin",
+    "request_id": "d39afc51-8a2e-403d-973b-83e0f99b3ddb"
+  }
+}
+{
+  "timestamp": "2025-06-11T08:51:23.725215",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": "No entities found matching search query: Varatoba and entity_type: , search_path: output/errotin/, matches_result: []"
+  }
+}
+{
+  "timestamp": "2025-06-11T08:51:25.326378",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "village",
+    "game_id": "errotin",
+    "request_id": "d39afc51-8a2e-403d-973b-83e0f99b3ddb"
+  }
+}
+{
+  "timestamp": "2025-06-11T08:51:26.641412",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "town",
+    "game_id": "errotin",
+    "request_id": "d39afc51-8a2e-403d-973b-83e0f99b3ddb"
+  }
+}
+{
+  "timestamp": "2025-06-11T08:51:28.379360",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Varatoba",
+    "game_id": "errotin",
+    "request_id": "d39afc51-8a2e-403d-973b-83e0f99b3ddb"
+  }
+}
+{
+  "timestamp": "2025-06-11T08:51:28.396142",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": "No entities found matching search query: Varatoba and entity_type: , search_path: output/errotin/, matches_result: []"
+  }
+}
+{
+  "timestamp": "2025-06-11T08:51:30.159085",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "village",
+    "game_id": "errotin",
+    "request_id": "d39afc51-8a2e-403d-973b-83e0f99b3ddb"
+  }
+}
+{
+  "timestamp": "2025-06-11T10:17:04.723144",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Varatoba",
+    "game_id": "errotin",
+    "request_id": "ad72c208-5540-45e5-858a-a88dfea14ae8"
+  }
+}
+{
+  "timestamp": "2025-06-11T10:17:04.728632",
   "tool_name": "find_entities",
   "label": "output",
   "data": {
     "result": [
       {
-        "id": "924c2dce-33a7-48a0-90ef-3ac7bee36070",
-        "personality_profile": "Eetaiouth's bright optimism shines through the shadows of his criminal past, as he yearns for a world where magic can mend wounds and unite hearts. Yet, beneath his hopeful exterior lies a vulnerability\u2014an inability to face harsh realities, often leading him to overlook the dangers lurking just beyond his cheerful fa\u00e7ade.",
-        "current_goal": null,
-        "entity_type": "character",
-        "name": "Eetaiouth",
-        "race": "Half-Orc",
-        "class": "Wizard",
-        "background": "Criminal",
-        "level": 1,
-        "proficiency_bonus": 2,
-        "cr": 1,
-        "ability_scores": {
-          "STR": 14,
-          "DEX": 8,
-          "CON": 17,
-          "INT": 15,
-          "WIS": 14,
-          "CHA": 10
+        "id": "79497384-3c36-40bd-bb1d-4b89bb8fd191",
+        "entity_type": "environment",
+        "name": "The Village of Varatoba",
+        "kind": "Open:Village",
+        "summary": "A quaint village nestled in a lush valley, surrounded by the whispers of ancient woods.",
+        "ambience": {
+          "light": "Soft sunlight filters through the trees, casting dappled shadows on the ground.",
+          "sound": "The gentle babble of a nearby brook, accompanied by the occasional chirping of birds.",
+          "smell": "The earthy scent of damp soil mingles with the sweet aroma of blooming wildflowers."
         },
-        "max_hp": 9,
-        "ac": 9,
-        "saving_throws": [
-          "INT",
-          "WIS"
+        "landmarks": [
+          "The Stone Well - an ancient well said to possess healing properties.",
+          "The Elders' Hall - a gathering place for the village council, adorned with tapestries telling the village's history.",
+          "The Market Square - bustling with traders selling fresh produce and handmade goods."
         ],
-        "skills": [
-          "Sleight of Hand",
-          "Stealth"
+        "creatures": [
+          "Friendly village cats that roam freely, often seen lounging in the sun.",
+          "Curious rabbits that peek from behind bushes, adding to the village's charm."
         ],
-        "tools": [
-          "Thieves' Tools"
+        "threats": [
+          "Wolves from the surrounding woods that occasionally venture close to the village.",
+          "Rumors of bandit raids on merchant caravans traveling between Varatoba and neighboring towns."
         ],
-        "feats": [
-          "Alert"
+        "loot_or_clues": [
+          "A hidden map leading to an ancient ruin rumored to hold lost treasures.",
+          "A mysterious pendant found near the Stone Well, tied to the village's folklore."
         ],
-        "request_id": "8ca424ec-cb9d-4f9c-879f-747b4a73d255",
+        "state": {},
+        "hooks": "The villagers are concerned about recent wolf attacks and seek brave adventurers to investigate the surrounding woods and ensure their safety.",
+        "description": null,
+        "schema_version": 1,
+        "game_id": "errotin"
+      }
+    ]
+  }
+}
+{
+  "timestamp": "2025-06-11T10:18:18.082866",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Varatoba",
+    "game_id": "errotin",
+    "request_id": "48183576-b8e9-40ff-b70a-03bc58c66b30"
+  }
+}
+{
+  "timestamp": "2025-06-11T10:18:18.088186",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": [
+      {
+        "id": "79497384-3c36-40bd-bb1d-4b89bb8fd191",
+        "entity_type": "environment",
+        "name": "The Village of Varatoba",
+        "kind": "Open:Village",
+        "summary": "A quaint village nestled in a lush valley, surrounded by the whispers of ancient woods.",
+        "ambience": {
+          "light": "Soft sunlight filters through the trees, casting dappled shadows on the ground.",
+          "sound": "The gentle babble of a nearby brook, accompanied by the occasional chirping of birds.",
+          "smell": "The earthy scent of damp soil mingles with the sweet aroma of blooming wildflowers."
+        },
+        "landmarks": [
+          "The Stone Well - an ancient well said to possess healing properties.",
+          "The Elders' Hall - a gathering place for the village council, adorned with tapestries telling the village's history.",
+          "The Market Square - bustling with traders selling fresh produce and handmade goods."
+        ],
+        "creatures": [
+          "Friendly village cats that roam freely, often seen lounging in the sun.",
+          "Curious rabbits that peek from behind bushes, adding to the village's charm."
+        ],
+        "threats": [
+          "Wolves from the surrounding woods that occasionally venture close to the village.",
+          "Rumors of bandit raids on merchant caravans traveling between Varatoba and neighboring towns."
+        ],
+        "loot_or_clues": [
+          "A hidden map leading to an ancient ruin rumored to hold lost treasures.",
+          "A mysterious pendant found near the Stone Well, tied to the village's folklore."
+        ],
+        "state": {},
+        "hooks": "The villagers are concerned about recent wolf attacks and seek brave adventurers to investigate the surrounding woods and ensure their safety.",
+        "description": null,
+        "schema_version": 1,
+        "game_id": "errotin"
+      }
+    ]
+  }
+}
+{
+  "timestamp": "2025-06-11T10:20:59.782882",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Varatoba",
+    "game_id": "errotin",
+    "request_id": "33df2d71-3934-479b-a2ee-98ff86f51f7d"
+  }
+}
+{
+  "timestamp": "2025-06-11T10:20:59.792780",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": [
+      {
+        "id": "ff2b7242-d2a6-4cea-8de7-969825312bc8",
+        "entity_type": "environment",
+        "name": "The Village of Varatoba",
+        "kind": "Open:Village",
+        "summary": "A quaint village nestled in a lush valley, surrounded by ancient woods and steeped in folklore.",
+        "ambience": {
+          "light": "Soft dappled sunlight filtering through the leaves.",
+          "sound": "The gentle rustling of leaves and the distant sound of laughter from villagers.",
+          "smell": "Freshly baked bread mingling with earthy forest scents."
+        },
+        "landmarks": [
+          "Stone Well with healing properties",
+          "Market Square bustling with vendors",
+          "Ancient Woods bordering the village"
+        ],
+        "creatures": [
+          "Curious woodland creatures",
+          "Occasional wolves lurking at the edge of the woods"
+        ],
+        "threats": [
+          "Wolf attacks threatening the safety of villagers",
+          "Mysterious disappearances linked to the woods"
+        ],
+        "loot_or_clues": [
+          "Folklore tales about the Stone Well's powers",
+          "Lost items from villagers who ventured too close to the woods"
+        ],
+        "state": {},
+        "hooks": "The villagers are in need of brave souls to investigate the recent wolf attacks and uncover the mysteries surrounding the Stone Well.",
+        "request_id": "48183576-b8e9-40ff-b70a-03bc58c66b30",
         "game_id": "errotin",
-        "description": "an optimist",
-        "schema_version": "1.0.0"
+        "description": "Varatoba is a picturesque village characterized by its vibrant community and lush surroundings. The villagers share tales of an ancient well said to possess healing properties, attracting those seeking cures and solace. However, the recent surge in wolf attacks has created an atmosphere of tension. The ancient woods loom nearby, whispering secrets that beckon adventurers while warning them of dangers that lurk within.",
+        "schema_version": 1
+      },
+      {
+        "id": "79497384-3c36-40bd-bb1d-4b89bb8fd191",
+        "entity_type": "environment",
+        "name": "The Village of Varatoba",
+        "kind": "Open:Village",
+        "summary": "A quaint village nestled in a lush valley, surrounded by the whispers of ancient woods.",
+        "ambience": {
+          "light": "Soft sunlight filters through the trees, casting dappled shadows on the ground.",
+          "sound": "The gentle babble of a nearby brook, accompanied by the occasional chirping of birds.",
+          "smell": "The earthy scent of damp soil mingles with the sweet aroma of blooming wildflowers."
+        },
+        "landmarks": [
+          "The Stone Well - an ancient well said to possess healing properties.",
+          "The Elders' Hall - a gathering place for the village council, adorned with tapestries telling the village's history.",
+          "The Market Square - bustling with traders selling fresh produce and handmade goods."
+        ],
+        "creatures": [
+          "Friendly village cats that roam freely, often seen lounging in the sun.",
+          "Curious rabbits that peek from behind bushes, adding to the village's charm."
+        ],
+        "threats": [
+          "Wolves from the surrounding woods that occasionally venture close to the village.",
+          "Rumors of bandit raids on merchant caravans traveling between Varatoba and neighboring towns."
+        ],
+        "loot_or_clues": [
+          "A hidden map leading to an ancient ruin rumored to hold lost treasures.",
+          "A mysterious pendant found near the Stone Well, tied to the village's folklore."
+        ],
+        "state": {},
+        "hooks": "The villagers are concerned about recent wolf attacks and seek brave adventurers to investigate the surrounding woods and ensure their safety.",
+        "description": null,
+        "schema_version": 1,
+        "game_id": "errotin"
+      }
+    ]
+  }
+}
+{
+  "timestamp": "2025-06-11T10:21:45.171067",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Varatoba",
+    "game_id": "errotin",
+    "request_id": "5681c811-389e-4b33-93fb-f856f1b592a8"
+  }
+}
+{
+  "timestamp": "2025-06-11T10:21:45.177185",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": [
+      {
+        "id": "ff2b7242-d2a6-4cea-8de7-969825312bc8",
+        "entity_type": "environment",
+        "name": "The Village of Varatoba",
+        "kind": "Open:Village",
+        "summary": "A quaint village nestled in a lush valley, surrounded by ancient woods and steeped in folklore.",
+        "ambience": {
+          "light": "Soft dappled sunlight filtering through the leaves.",
+          "sound": "The gentle rustling of leaves and the distant sound of laughter from villagers.",
+          "smell": "Freshly baked bread mingling with earthy forest scents."
+        },
+        "landmarks": [
+          "Stone Well with healing properties",
+          "Market Square bustling with vendors",
+          "Ancient Woods bordering the village"
+        ],
+        "creatures": [
+          "Curious woodland creatures",
+          "Occasional wolves lurking at the edge of the woods"
+        ],
+        "threats": [
+          "Wolf attacks threatening the safety of villagers",
+          "Mysterious disappearances linked to the woods"
+        ],
+        "loot_or_clues": [
+          "Folklore tales about the Stone Well's powers",
+          "Lost items from villagers who ventured too close to the woods"
+        ],
+        "state": {},
+        "hooks": "The villagers are in need of brave souls to investigate the recent wolf attacks and uncover the mysteries surrounding the Stone Well.",
+        "request_id": "48183576-b8e9-40ff-b70a-03bc58c66b30",
+        "game_id": "errotin",
+        "description": "Varatoba is a picturesque village characterized by its vibrant community and lush surroundings. The villagers share tales of an ancient well said to possess healing properties, attracting those seeking cures and solace. However, the recent surge in wolf attacks has created an atmosphere of tension. The ancient woods loom nearby, whispering secrets that beckon adventurers while warning them of dangers that lurk within.",
+        "schema_version": 1
+      },
+      {
+        "id": "79497384-3c36-40bd-bb1d-4b89bb8fd191",
+        "entity_type": "environment",
+        "name": "The Village of Varatoba",
+        "kind": "Open:Village",
+        "summary": "A quaint village nestled in a lush valley, surrounded by the whispers of ancient woods.",
+        "ambience": {
+          "light": "Soft sunlight filters through the trees, casting dappled shadows on the ground.",
+          "sound": "The gentle babble of a nearby brook, accompanied by the occasional chirping of birds.",
+          "smell": "The earthy scent of damp soil mingles with the sweet aroma of blooming wildflowers."
+        },
+        "landmarks": [
+          "The Stone Well - an ancient well said to possess healing properties.",
+          "The Elders' Hall - a gathering place for the village council, adorned with tapestries telling the village's history.",
+          "The Market Square - bustling with traders selling fresh produce and handmade goods."
+        ],
+        "creatures": [
+          "Friendly village cats that roam freely, often seen lounging in the sun.",
+          "Curious rabbits that peek from behind bushes, adding to the village's charm."
+        ],
+        "threats": [
+          "Wolves from the surrounding woods that occasionally venture close to the village.",
+          "Rumors of bandit raids on merchant caravans traveling between Varatoba and neighboring towns."
+        ],
+        "loot_or_clues": [
+          "A hidden map leading to an ancient ruin rumored to hold lost treasures.",
+          "A mysterious pendant found near the Stone Well, tied to the village's folklore."
+        ],
+        "state": {},
+        "hooks": "The villagers are concerned about recent wolf attacks and seek brave adventurers to investigate the surrounding woods and ensure their safety.",
+        "description": null,
+        "schema_version": 1,
+        "game_id": "errotin"
       }
     ]
   }

@@ -28,7 +28,7 @@ llm = LLM(
 
 crew_input = {
     "request_id": str(uuid4()),
-    "description": "Eetaiouth's cellar.",
+    "description": "The village of Varatoba",
     "game_id": os.getenv("GAME_ID")
 }
 
