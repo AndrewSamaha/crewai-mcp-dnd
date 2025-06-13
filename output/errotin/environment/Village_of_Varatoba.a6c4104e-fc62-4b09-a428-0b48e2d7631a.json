@@ -1,0 +1,37 @@
+{
+	"id": "a6c4104e-fc62-4b09-a428-0b48e2d7631a",
+	"entity_type": "environment",
+	"name": "Village of Varatoba",
+	"kind": "Open:Village",
+	"summary": "A quaint village known for its healing well, nestled at the edge of ancient woods.",
+	"ambience": {
+		"light": "Soft sunlight filters through the leaves, casting dappled shadows on cobblestone paths.",
+		"sound": "The gentle babble of a stream mixed with the distant chatter of villagers.",
+		"smell": "The fresh scent of blooming herbs and the earthy aroma of the surrounding woods."
+	},
+	"landmarks": [
+		"Healing Well",
+		"The Elder's Lodge",
+		"Market Square",
+		"The Whispering Woods"
+	],
+	"creatures": [
+		"Villagers",
+		"Wolves (recently spotted)",
+		"Small woodland creatures"
+	],
+	"threats": [
+		"Recent wolf attacks causing fear among villagers.",
+		"Mysterious disappearances in the woods."
+	],
+	"loot_or_clues": [
+		"A map leading to hidden treasures in the Whispering Woods.",
+		"An ancient talisman believed to ward off wolves."
+	],
+	"state": {},
+	"hooks": "The village is at a tipping point; will the players help defend it against the wolves, or uncover the secrets hidden in the woods?",
+	"request_id": "09e0d4c9-1c52-4d3a-bc12-2f5843637c31",
+	"game_id": "errotin",
+	"description": "Varatoba is a serene village characterized by its tight-knit community and rich folklore. The villagers gather at the Healing Well, a site said to have miraculous properties, which draws travelers seeking cures and blessings. However, recent wolf attacks have cast a shadow over their peaceful existence, creating an atmosphere thick with tension. The surrounding Whispering Woods are home to both treasures and secrets waiting to be uncovered. As adventurers explore this charming yet perilous village, they will encounter challenges that test their courage and resourcefulness.",
+	"schema_version": 1
+}
