@@ -15,19 +15,29 @@ GAME_INFORMATION = get_game_information(GAME_ID)
 
 crew_input = {
     "request_id": str(uuid4()),
-    "description": "The village of Unka",
+    "description": "Duneladon Mountain",
     "game_id": os.getenv("GAME_ID")
 }
 
 server_params_list = [
+    # StdioServerParameters(
+    #     command="python3", 
+    #     args=["servers/game_entity_maker.py"],
+    #     env={"UV_PYTHON": "3.12", **os.environ},
+    # ),
+    # StdioServerParameters(
+    #     command="python3", 
+    #     args=["servers/json_file_tool.py"],
+    #     env={"UV_PYTHON": "3.12", **os.environ},
+    # ),
     StdioServerParameters(
         command="python3", 
-        args=["servers/game_entity_maker.py"],
+        args=["-m", "servers.game_entity_maker"],
         env={"UV_PYTHON": "3.12", **os.environ},
     ),
     StdioServerParameters(
         command="python3", 
-        args=["servers/json_file_tool.py"],
+        args=["-m", "servers.json_file_tool"],
         env={"UV_PYTHON": "3.12", **os.environ},
     ),
 ]

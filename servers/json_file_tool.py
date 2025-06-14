@@ -4,22 +4,13 @@ This server provides JSON file operations as tools that can be discovered and us
 """
 
 from mcp.server.fastmcp import FastMCP
-from file_utils.filename import make_filename
-from file_utils.ripgrep import find_entities_fn
-from file_utils.json import save_game_entity_fn
-from utils.logging import log
-import json
-import os
+from servers.file_utils.filename import make_filename
+from servers.file_utils.ripgrep import find_entities_fn
+from servers.file_utils.json import save_game_entity_fn
+from servers.utils.logging import log
+from constants.paths import BASE_PATH
 
 mcp = FastMCP("JSON File")
-
-BASE_PATH="output/"
-
-# def get_path(game_entity: dict) -> str:
-#     game_id = game_entity["game_id"]
-#     entity_type = game_entity["entity_type"]
-#     directory = BASE_PATH + game_id + "/" + entity_type + "/"
-#     return directory
 
 @mcp.tool()
 def save_game_entity(request_id: str, game_entity: dict) -> str:
@@ -30,13 +21,6 @@ def save_game_entity(request_id: str, game_entity: dict) -> str:
         game_entity (dict): The ENTIRE game entity to save as a JSON file.
     """
     return save_game_entity_fn(game_entity)
-    # filename = make_filename(game_entity)
-    # directory = get_path(game_entity)
-    # if not os.path.exists(directory):
-    #     os.makedirs(directory)
-    # with open(directory + filename, "w") as f:
-    #     json.dump(game_entity, f, indent="\t")
-    # return filename
 
 @mcp.tool()
 def get_game_entity_by_id(request_id: str, game_id: str, game_entity_id: str) -> dict:

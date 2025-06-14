@@ -1,0 +1,38 @@
+{
+	"id": "e77a0f1f-f73a-46e6-938a-419b480c87b4",
+	"entity_type": "environment",
+	"name": "Duneladon Mountain",
+	"kind": "Open:Mountain",
+	"summary": "A towering mountain known for its ancient ruins, mystical energy, and treacherous peaks.",
+	"ambience": {
+		"light": "Dappled sunlight filters through thick clouds, casting eerie shadows.",
+		"sound": "The distant roar of wind and the occasional echo of draconic roars.",
+		"smell": "The crisp scent of pine mixed with the earthy aroma of ancient stone."
+	},
+	"landmarks": [
+		"Ancient Ruins of Eldrin",
+		"The Dragon's Roost",
+		"The Whispering Caverns"
+	],
+	"creatures": [
+		"Wyrmlings of Duneladon",
+		"Mountain Trolls",
+		"Phantom Shadows"
+	],
+	"threats": [
+		"Factions vying for control",
+		"Ambush by rogue bandits",
+		"The legendary dragon that roams the heights"
+	],
+	"loot_or_clues": [
+		"Fragments of ancient texts detailing the mountain's secrets.",
+		"Rare crystals imbued with mystical energy.",
+		"Dragon scales that can be used in powerful crafting."
+	],
+	"state": {},
+	"hooks": "Adventurers are drawn to Duneladon Mountain in search of glory, treasure, and the truth behind its legends. What secrets will they uncover?",
+	"request_id": "07b9437f-1818-4fea-acdf-189e7a081a8c",
+	"game_id": "errotin",
+	"description": "Duneladon Mountain rises majestically against the sky, its peaks often shrouded in mist. The air is thick with the scent of mystery, as ancient ruins tell tales of a long-lost civilization. Each faction has its claim to the mountain, leading to tension and conflict among those who seek its hidden treasures. Rumors abound of a dragon that surveys its domain from above, ready to defend its lair against intruders.",
+	"schema_version": 1
+}

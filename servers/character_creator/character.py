@@ -7,10 +7,10 @@ backgrounds, plus derived HP and AC.  Added JSON export helpers.
 import random
 import json
 from typing import Dict, List
-try:
-    from character_creator.name_generator import FantasyNameGenerator  # Absolute import for package usage
-except ImportError:
-    from name_generator import FantasyNameGenerator  # Fallback for direct script execution
+#try:
+#    from servers.character_creator.name_generator import FantasyNameGenerator  # Absolute import for package usage
+#except ImportError:
+from servers.character_creator.name_generator import FantasyNameGenerator  # Fallback for direct script execution
 import json
 import uuid
 import os

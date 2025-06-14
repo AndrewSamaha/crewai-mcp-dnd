@@ -5,9 +5,9 @@ This server provides character and environment creation operations as tools that
 
 from mcp.server.fastmcp import FastMCP
 from typing import Optional
-from character_creator.character import build_random_character, log
-from environments.environments import Environment
-from file_utils.ripgrep import find_entity_by_id
+from servers.character_creator.character import build_random_character, log
+from servers.environments.environments import Environment
+from servers.file_utils.ripgrep import find_entity_by_id
 import json
 from typing import Dict, List
 
