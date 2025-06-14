@@ -15,7 +15,7 @@ GAME_INFORMATION = get_game_information(GAME_ID)
 
 crew_input = {
     "request_id": str(uuid4()),
-    "description": "The village of Varatoba",
+    "description": "The village of Unka",
     "game_id": os.getenv("GAME_ID")
 }
 
@@ -83,7 +83,7 @@ with tracer.start_as_current_span("Environment Crew") as span:
     llm = LLM(
         model="openai/gpt-4o-mini", # call model by provider/model_name
         temperature=0.8,
-        max_tokens=500,
+        max_tokens=1_000,
         top_p=0.9,
         frequency_penalty=0.1,
         presence_penalty=0.1,
@@ -159,6 +159,7 @@ with tracer.start_as_current_span("Environment Crew") as span:
             ),
             tools=aggregated_tools,
             verbose=True,
+            cache=False,
             llm=llm,
         )
 

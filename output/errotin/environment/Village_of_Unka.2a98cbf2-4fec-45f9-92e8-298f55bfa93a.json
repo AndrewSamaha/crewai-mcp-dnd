@@ -1,0 +1,36 @@
+{
+	"id": "2a98cbf2-4fec-45f9-92e8-298f55bfa93a",
+	"entity_type": "environment",
+	"name": "Village of Unka",
+	"kind": "Open:Village",
+	"summary": "A quaint village surrounded by lush fields, known for its vibrant market and friendly inhabitants.",
+	"ambience": {
+		"light": "Soft golden sunlight filtering through the leaves of ancient trees.",
+		"sound": "The cheerful chatter of villagers and the distant sound of a bubbling brook.",
+		"smell": "The aroma of freshly baked bread mingled with blooming wildflowers.",
+		"vibe": "A palpable sense of tension and unease hangs on everything and everyone"
+	},
+	"landmarks": [
+		"The Great Oak Tree - a centuries-old tree at the village center, said to be a meeting place for important decisions.",
+		"The Market Square - bustling with traders selling local goods, food, and crafts.",
+		"The Healer's Hut - a small cottage filled with herbs and remedies, run by the village's wise healer."
+	],
+	"creatures": [
+		"Friendly dogs that roam freely, greeting visitors with wagging tails.",
+		"Occasional flocks of birds that fill the sky, adding to the village's charm."
+	],
+	"threats": [
+		"Mysterious wolves that prowl the outskirts at night, causing fear among the villagers.",
+		"Rumors of a malevolent sorcerer lurking in the nearby woods, seeking to harness the village's magic."
+	],
+	"loot_or_clues": [
+		"Ancient coins buried beneath the Great Oak Tree, rumored to be from a long-lost civilization.",
+		"A map leading to a hidden cave said to contain powerful artifacts."
+	],
+	"state": {},
+	"hooks": "The village is experiencing strange phenomena - crops are failing, and livestock has gone missing. Villagers are looking for brave souls to uncover the source of these troubles.",
+	"request_id": "761d7cec-31fb-4a7a-8434-a95920773bdb",
+	"game_id": "errotin",
+	"description": "Unka is a picturesque village nestled in a valley, where nature thrives and community bonds are strong. The villagers are known for their hospitality and rich traditions, but dark forces seem to be creeping into their peaceful lives.",
+	"schema_version": 1
+}
