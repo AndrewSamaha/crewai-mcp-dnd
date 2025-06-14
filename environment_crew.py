@@ -1,4 +1,4 @@
-from instrumentation.langfuse import tracer
+from instrumentation.langfuse import tracer, callback_factory
 from crewai import Agent, Task, Crew, Process
 from crewai_tools import MCPServerAdapter
 from mcp import StdioServerParameters
@@ -15,21 +15,11 @@ GAME_INFORMATION = get_game_information(GAME_ID)
 
 crew_input = {
     "request_id": str(uuid4()),
-    "description": "Duneladon Mountain",
+    "description": "The cave of sorrows on the east face of Duneladon Mountain",
     "game_id": os.getenv("GAME_ID")
 }
 
 server_params_list = [
-    # StdioServerParameters(
-    #     command="python3", 
-    #     args=["servers/game_entity_maker.py"],
-    #     env={"UV_PYTHON": "3.12", **os.environ},
-    # ),
-    # StdioServerParameters(
-    #     command="python3", 
-    #     args=["servers/json_file_tool.py"],
-    #     env={"UV_PYTHON": "3.12", **os.environ},
-    # ),
     StdioServerParameters(
         command="python3", 
         args=["-m", "servers.game_entity_maker"],
@@ -41,47 +31,6 @@ server_params_list = [
         env={"UV_PYTHON": "3.12", **os.environ},
     ),
 ]
-
-def step_callback(data):
-    with tracer.start_span("crew_step_callback") as span:
-        span.set_attribute("langfuse.user.id", "user-123")
-        span.set_attribute("langfuse.session.id", "123456789")
-        span.set_attribute("langfuse.tags", ["staging", "demo"])
-        span.set_attribute("client_id", "123456789")
-        # check if data is a dictionary
-        if isinstance(data, dict):
-            span.set_attribute("output.value", json.dumps(data))
-        else:
-            span.set_attribute("output.value", str(data))
-        #span.end()
-
-def task_callback(data):
-    with tracer.start_span("crew_task_callback") as span:
-        span.set_attribute("langfuse.user.id", "user-123")
-        span.set_attribute("langfuse.session.id", "123456789")
-        span.set_attribute("langfuse.tags", ["staging", "demo"])
-        span.set_attribute("client_id", "123456789")
-        # check if data is a dictionary
-        if isinstance(data, dict):
-            span.set_attribute("output.value", json.dumps(data))
-        else:
-            span.set_attribute("output.value", str(data))
-
-def callback_factory(span_name: str, tags: list[str] = []):
-    def callback(data):
-        with tracer.start_span(span_name) as span:
-            span.set_attribute("langfuse.user.id", "user-123")
-            span.set_attribute("langfuse.session.id", "123456789")
-            if tags and len(tags) > 0:
-                span.set_attribute("langfuse.tags", tags)
-            span.set_attribute("client_id", "123456789")
-            # check if data is a dictionary
-            if isinstance(data, dict):
-                span.set_attribute("output.value", json.dumps(data))
-            else:
-                span.set_attribute("output.value", str(data))
-            span.end()
-    return callback
 
 # Use the StdioServerParameters object to create a MCPServerAdapter
 with tracer.start_as_current_span("Environment Crew") as span:
@@ -99,7 +48,6 @@ with tracer.start_as_current_span("Environment Crew") as span:
         presence_penalty=0.1,
         stop=["END"],
         api_key=os.getenv("OPENAI_API_KEY"),
-        #callback=callback_factory("llm_callback")
     )
     
     with MCPServerAdapter(server_params_list) as aggregated_tools:
@@ -202,8 +150,8 @@ with tracer.start_as_current_span("Environment Crew") as span:
             tasks=[research_task, environment_creation_task, save_entity_task],
             process=Process.sequential,
             verbose=True,
-            step_callback=step_callback,
-            task_callback=task_callback,
+            step_callback=callback_factory("crew_step_callback"),
+            task_callback=callback_factory("crew_task_callback"),
         )
         result = crew.kickoff(inputs=crew_input)
         print(result)

@@ -10867,3 +10867,234 @@
     "result": "No entities found matching search query: Unka and entity_type: , search_path: output/errotin/, matches_result: []"
   }
 }
+{
+  "timestamp": "2025-06-14T13:34:18.868659",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Duneladon Mountain",
+    "game_id": "errotin",
+    "request_id": "61cee3f4-8e1b-4db9-a9be-dd8b1fe4facb"
+  }
+}
+{
+  "timestamp": "2025-06-14T13:34:18.895024",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": [
+      {
+        "id": "e77a0f1f-f73a-46e6-938a-419b480c87b4",
+        "entity_type": "environment",
+        "name": "Duneladon Mountain",
+        "kind": "Open:Mountain",
+        "summary": "A towering mountain known for its ancient ruins, mystical energy, and treacherous peaks.",
+        "ambience": {
+          "light": "Dappled sunlight filters through thick clouds, casting eerie shadows.",
+          "sound": "The distant roar of wind and the occasional echo of draconic roars.",
+          "smell": "The crisp scent of pine mixed with the earthy aroma of ancient stone."
+        },
+        "landmarks": [
+          "Ancient Ruins of Eldrin",
+          "The Dragon's Roost",
+          "The Whispering Caverns"
+        ],
+        "creatures": [
+          "Wyrmlings of Duneladon",
+          "Mountain Trolls",
+          "Phantom Shadows"
+        ],
+        "threats": [
+          "Factions vying for control",
+          "Ambush by rogue bandits",
+          "The legendary dragon that roams the heights"
+        ],
+        "loot_or_clues": [
+          "Fragments of ancient texts detailing the mountain's secrets.",
+          "Rare crystals imbued with mystical energy.",
+          "Dragon scales that can be used in powerful crafting."
+        ],
+        "state": {},
+        "hooks": "Adventurers are drawn to Duneladon Mountain in search of glory, treasure, and the truth behind its legends. What secrets will they uncover?",
+        "request_id": "07b9437f-1818-4fea-acdf-189e7a081a8c",
+        "game_id": "errotin",
+        "description": "Duneladon Mountain rises majestically against the sky, its peaks often shrouded in mist. The air is thick with the scent of mystery, as ancient ruins tell tales of a long-lost civilization. Each faction has its claim to the mountain, leading to tension and conflict among those who seek its hidden treasures. Rumors abound of a dragon that surveys its domain from above, ready to defend its lair against intruders.",
+        "schema_version": 1
+      }
+    ]
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:09.802570",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Duneladon Mountain",
+    "game_id": "errotin",
+    "request_id": "39fe648c-06c6-40e5-9ad8-c75e7d0aab9f"
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:09.822960",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": [
+      {
+        "id": "e77a0f1f-f73a-46e6-938a-419b480c87b4",
+        "entity_type": "environment",
+        "name": "Duneladon Mountain",
+        "kind": "Open:Mountain",
+        "summary": "A towering mountain known for its ancient ruins, mystical energy, and treacherous peaks.",
+        "ambience": {
+          "light": "Dappled sunlight filters through thick clouds, casting eerie shadows.",
+          "sound": "The distant roar of wind and the occasional echo of draconic roars.",
+          "smell": "The crisp scent of pine mixed with the earthy aroma of ancient stone."
+        },
+        "landmarks": [
+          "Ancient Ruins of Eldrin",
+          "The Dragon's Roost",
+          "The Whispering Caverns"
+        ],
+        "creatures": [
+          "Wyrmlings of Duneladon",
+          "Mountain Trolls",
+          "Phantom Shadows"
+        ],
+        "threats": [
+          "Factions vying for control",
+          "Ambush by rogue bandits",
+          "The legendary dragon that roams the heights"
+        ],
+        "loot_or_clues": [
+          "Fragments of ancient texts detailing the mountain's secrets.",
+          "Rare crystals imbued with mystical energy.",
+          "Dragon scales that can be used in powerful crafting."
+        ],
+        "state": {},
+        "hooks": "Adventurers are drawn to Duneladon Mountain in search of glory, treasure, and the truth behind its legends. What secrets will they uncover?",
+        "request_id": "07b9437f-1818-4fea-acdf-189e7a081a8c",
+        "game_id": "errotin",
+        "description": "Duneladon Mountain rises majestically against the sky, its peaks often shrouded in mist. The air is thick with the scent of mystery, as ancient ruins tell tales of a long-lost civilization. Each faction has its claim to the mountain, leading to tension and conflict among those who seek its hidden treasures. Rumors abound of a dragon that surveys its domain from above, ready to defend its lair against intruders.",
+        "schema_version": 1
+      }
+    ]
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:13.159444",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "",
+    "search_query": "cave of sorrows",
+    "game_id": "errotin",
+    "request_id": "39fe648c-06c6-40e5-9ad8-c75e7d0aab9f"
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:13.180212",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": "No entities found matching search query: cave of sorrows and entity_type: , search_path: output/errotin/, matches_result: []"
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:16.531334",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "character",
+    "search_query": "Duneladon Mountain",
+    "game_id": "errotin",
+    "request_id": "39fe648c-06c6-40e5-9ad8-c75e7d0aab9f"
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:16.551680",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": "No entities found matching search query: Duneladon Mountain and entity_type: character, search_path: output/errotin/character/, matches_result: []"
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:20.113294",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "environment",
+    "search_query": "cave of sorrows",
+    "game_id": "errotin",
+    "request_id": "39fe648c-06c6-40e5-9ad8-c75e7d0aab9f"
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:20.138223",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": "No entities found matching search query: cave of sorrows and entity_type: environment, search_path: output/errotin/environment/, matches_result: []"
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:23.492398",
+  "tool_name": "find_entities",
+  "label": "input",
+  "data": {
+    "entity_type": "environment",
+    "search_query": "Duneladon Mountain",
+    "game_id": "errotin",
+    "request_id": "39fe648c-06c6-40e5-9ad8-c75e7d0aab9f"
+  }
+}
+{
+  "timestamp": "2025-06-14T13:37:23.506065",
+  "tool_name": "find_entities",
+  "label": "output",
+  "data": {
+    "result": [
+      {
+        "id": "e77a0f1f-f73a-46e6-938a-419b480c87b4",
+        "entity_type": "environment",
+        "name": "Duneladon Mountain",
+        "kind": "Open:Mountain",
+        "summary": "A towering mountain known for its ancient ruins, mystical energy, and treacherous peaks.",
+        "ambience": {
+          "light": "Dappled sunlight filters through thick clouds, casting eerie shadows.",
+          "sound": "The distant roar of wind and the occasional echo of draconic roars.",
+          "smell": "The crisp scent of pine mixed with the earthy aroma of ancient stone."
+        },
+        "landmarks": [
+          "Ancient Ruins of Eldrin",
+          "The Dragon's Roost",
+          "The Whispering Caverns"
+        ],
+        "creatures": [
+          "Wyrmlings of Duneladon",
+          "Mountain Trolls",
+          "Phantom Shadows"
+        ],
+        "threats": [
+          "Factions vying for control",
+          "Ambush by rogue bandits",
+          "The legendary dragon that roams the heights"
+        ],
+        "loot_or_clues": [
+          "Fragments of ancient texts detailing the mountain's secrets.",
+          "Rare crystals imbued with mystical energy.",
+          "Dragon scales that can be used in powerful crafting."
+        ],
+        "state": {},
+        "hooks": "Adventurers are drawn to Duneladon Mountain in search of glory, treasure, and the truth behind its legends. What secrets will they uncover?",
+        "request_id": "07b9437f-1818-4fea-acdf-189e7a081a8c",
+        "game_id": "errotin",
+        "description": "Duneladon Mountain rises majestically against the sky, its peaks often shrouded in mist. The air is thick with the scent of mystery, as ancient ruins tell tales of a long-lost civilization. Each faction has its claim to the mountain, leading to tension and conflict among those who seek its hidden treasures. Rumors abound of a dragon that surveys its domain from above, ready to defend its lair against intruders.",
+        "schema_version": 1
+      }
+    ]
+  }
+}

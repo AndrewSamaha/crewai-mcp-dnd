@@ -1,0 +1,35 @@
+{
+	"id": "3a46f01d-1721-495b-a08e-37133c83e4a8",
+	"entity_type": "environment",
+	"name": "Cave of Sorrows",
+	"kind": "Closed:Cave",
+	"summary": "A dark, foreboding cave that echoes with the whispers of lost souls.",
+	"ambience": {
+		"light": "Dimly lit by glowing fungi that pulse with an eerie light.",
+		"sound": "The distant wails of the sorrowful and the echoing drip of water.",
+		"smell": "A damp, musty odor mixed with a hint of decay."
+	},
+	"landmarks": [
+		"Ancient Ruins of Eldrin",
+		"The Dragon's Roost",
+		"The Whispering Caverns"
+	],
+	"creatures": [
+		"Wyrmlings of Duneladon",
+		"Phantom Shadows"
+	],
+	"threats": [
+		"Factions vying for control",
+		"Ambush by rogue bandits"
+	],
+	"loot_or_clues": [
+		"Fragments of ancient texts hinting at the cave's dark history.",
+		"A mysterious artifact that glows with an inner light, said to belong to a lost civilization."
+	],
+	"state": {},
+	"hooks": "The cave is said to be a focal point of the mystical energy coursing through Duneladon Mountain, drawing adventurers and factions alike. Rumors of a legendary dragon's lair nearby add to the urgency of exploration.",
+	"request_id": "39fe648c-06c6-40e5-9ad8-c75e7d0aab9f",
+	"game_id": "errotin",
+	"description": "The Cave of Sorrows, located on the east face of Duneladon Mountain, is a place steeped in legend and sorrow. It is rumored to be haunted by the spirits of those who perished in their quest for power and glory. The air is thick with tension as adventurers step inside, where flickering lights cast long shadows and every sound seems amplified. The cave is a labyrinth of twisting tunnels leading deeper into the mountain's heart, where ancient secrets await discovery.",
+	"schema_version": 1
+}

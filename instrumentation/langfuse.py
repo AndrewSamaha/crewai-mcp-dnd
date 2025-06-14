@@ -29,3 +29,18 @@ trace.set_tracer_provider(trace_provider)
 tracer = trace.get_tracer(__name__)
 
 openlit.init(tracer=tracer, disable_batch=True)
+
+def callback_factory(span_name: str, tags: list[str] = []):
+    def callback(data):
+        with tracer.start_span(span_name) as span:
+            span.set_attribute("langfuse.user.id", "user-123")
+            span.set_attribute("langfuse.session.id", "123456789")
+            if tags and len(tags) > 0:
+                span.set_attribute("langfuse.tags", tags)
+            span.set_attribute("client_id", "123456789")
+            # check if data is a dictionary
+            if isinstance(data, dict):
+                span.set_attribute("output.value", json.dumps(data))
+            else:
+                span.set_attribute("output.value", str(data))
+    return callback
