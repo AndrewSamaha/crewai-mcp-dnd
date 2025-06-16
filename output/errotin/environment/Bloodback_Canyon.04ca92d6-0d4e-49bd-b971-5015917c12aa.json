@@ -1,0 +1,38 @@
+{
+	"id": "04ca92d6-0d4e-49bd-b971-5015917c12aa",
+	"entity_type": "environment",
+	"name": "Bloodback Canyon",
+	"kind": "Open:Canyon",
+	"summary": "A treacherous canyon with steep blood-red cliffs and a tumultuous river flowing through its depths.",
+	"ambience": {
+		"light": "Dim, with shadows cast by the high cliffs.",
+		"sound": "The roar of rushing water mixed with distant echoes.",
+		"smell": "A metallic scent of damp earth and moss."
+	},
+	"landmarks": [
+		"The Bloodstone Arch - a natural rock formation resembling a gaping maw.",
+		"The Whispering Falls - a waterfall that creates ghostly sounds when the wind blows.",
+		"Ancient Rune Stones - covered in mysterious inscriptions along the canyon walls."
+	],
+	"creatures": [
+		"Bloodhounds - feral canines with a keen sense of smell that stalk the canyon.",
+		"Canyon Wraiths - spectral figures said to haunt the area, warning of impending danger.",
+		"Giant Cave Bats - lurking in the shadows, they swoop down at dusk."
+	],
+	"threats": [
+		"Landslides - unpredictable and deadly, especially during storms.",
+		"Rogue Bandits - known to ambush travelers who venture too close to their hideouts.",
+		"Poisonous Plants - lurking in the underbrush, these plants can cause hallucinations."
+	],
+	"loot_or_clues": [
+		"A hidden treasure chest at the base of the Whispering Falls, rumored to contain ancient artifacts.",
+		"Maps leading to lost caverns filled with gold and gems.",
+		"A mystical amulet found among the Ancient Rune Stones that grants protection from the canyon's spirits."
+	],
+	"state": {},
+	"hooks": "The canyon is rumored to hold secrets of an ancient civilization that once thrived in this land. Adventurers are drawn to its depths seeking fame, fortune, or the truth behind its dark legends.",
+	"request_id": "f41d6840-f86e-451f-add1-bf98a0f1dc25",
+	"game_id": "errotin",
+	"description": "Bloodback Canyon is a foreboding yet awe-inspiring location where adventurers must navigate treacherous paths while avoiding deadly creatures and uncovering ancient mysteries. The eerie atmosphere is amplified by the canyon's haunting beauty, making it both a perilous and enticing destination.",
+	"schema_version": 1
+}

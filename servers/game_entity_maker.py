@@ -10,6 +10,7 @@ from servers.environments.environments import Environment
 from servers.file_utils.ripgrep import find_entity_by_id
 import json
 from typing import Dict, List
+from servers.utils.logging import log
 
 mcp = FastMCP("Character")
 
@@ -143,6 +144,24 @@ def create_environment(
     ...     summary="Grassy ridge overlooking farmland."
     ... )
     """
+    log({
+        "request_id": request_id,
+        "game_id": game_id,
+        "name": name,
+        "kind": kind,
+        "summary": summary,
+        "ambience": ambience,
+        "landmarks": landmarks,
+        "creatures": creatures,
+        "threats": threats,
+        "loot_or_clues": loot_or_clues,
+        "state": state,
+        "hooks": hooks,
+        "closed_spec": closed_spec,
+        "open_spec": open_spec,
+        "description": description,
+    }, "create_environment", "nolabel")
+
     # ── Minimal validation so the agent can't generate illegal payloads ─────────
     if not kind.lower().startswith(("open:", "closed:")):
         raise ValueError('kind must start with "Open:" or "Closed:".')

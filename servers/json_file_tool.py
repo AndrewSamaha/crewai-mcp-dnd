@@ -13,14 +13,18 @@ from constants.paths import BASE_PATH
 mcp = FastMCP("JSON File")
 
 @mcp.tool()
-def save_game_entity(request_id: str, game_entity: dict) -> str:
+def save_game_entity(game_entity: dict) -> str:
     """Save a game entity as a JSON file.
     
     Args:
-        request_id (str): The ID of the request.
         game_entity (dict): The ENTIRE game entity to save as a JSON file.
     """
-    return save_game_entity_fn(game_entity)
+    log({
+        "game_entity": game_entity,
+    }, "save_game_entity", "mcp_tool_input")
+    result = save_game_entity_fn(game_entity)
+    log({"result": result}, "save_game_entity", "mcp_tool_output")
+    return result
 
 @mcp.tool()
 def get_game_entity_by_id(request_id: str, game_id: str, game_entity_id: str) -> dict:
@@ -57,9 +61,9 @@ def find_entities(request_id: str, game_id: str, search_query: str, entity_type:
     Returns:
         list: A list of entities that match the given search query and entity_type.
     """
-    log({"entity_type": entity_type, "search_query": search_query, "game_id": game_id, "request_id": request_id}, "find_entities", "input")
+    log({"entity_type": entity_type, "search_query": search_query, "game_id": game_id, "request_id": request_id}, "find_entities", "mcp_tool_input")
     result = find_entities_fn(search_query, game_id, entity_type)
-    log({"result": result}, "find_entities", "output")
+    log({"result": result}, "find_entities", "mcp_tool_output")
     return result
 
 if __name__ == "__main__":

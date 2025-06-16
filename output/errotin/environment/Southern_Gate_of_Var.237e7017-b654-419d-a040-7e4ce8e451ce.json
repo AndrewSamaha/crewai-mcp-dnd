@@ -1,0 +1,36 @@
+{
+	"id": "237e7017-b654-419d-a040-7e4ce8e451ce",
+	"entity_type": "environment",
+	"name": "Southern Gate of Varatoba Village",
+	"kind": "Open:VillageGate",
+	"summary": "A sturdy wooden gate adorned with symbols of protection, standing as a sentinel to the quaint yet troubled village of Varatoba.",
+	"ambience": {
+		"light": "Soft daylight filters through the trees, casting dappled shadows on the ground.",
+		"sound": "The distant sound of villagers going about their daily lives mixes with the rustle of leaves.",
+		"smell": "A hint of fresh earth and blooming wildflowers, intertwined with the faint scent of smoke from cooking fires."
+	},
+	"landmarks": [
+		"The Healing Well",
+		"Whispering Woods"
+	],
+	"creatures": [
+		"Villagers",
+		"Wolves"
+	],
+	"threats": [
+		"Recent wolf attacks that have put the villagers on edge."
+	],
+	"loot_or_clues": [
+		"Tales of hidden treasures in the Whispering Woods.",
+		"A map leading to potential wolf dens."
+	],
+	"state": {
+		"gate_open": false,
+		"tension_high": true
+	},
+	"hooks": "The Southern Gate serves as a crucial point for adventurers entering Varatoba, where they can hear whispers of recent dangers and discover quests related to the wolf attacks.",
+	"request_id": "577360ff-eaa4-46be-89a3-10ee3addfc8f",
+	"game_id": "errotin",
+	"description": "The Southern Gate of Varatoba Village is a wooden structure that stands strong against the elements. Intricate carvings depicting protective symbols adorn its surface. The gate is flanked by two sturdy posts, each wrapped in climbing vines. Beyond the gate lies the bustling village, known for its healing well and tight-knit community. However, the atmosphere is charged with unease due to recent wolf attacks that have frightened the villagers. Adventurers passing through are greeted by wary looks and hushed conversations about the dangers lurking in the nearby Whispering Woods.",
+	"schema_version": 1
+}

@@ -1,0 +1,38 @@
+{
+	"id": "0dbef695-e1ea-4c92-8146-46aa3a7414ba",
+	"entity_type": "environment",
+	"name": "Portabello Road",
+	"kind": "Open:MarketStreet",
+	"summary": "A lively market street filled with vibrant stalls and the sounds of bargaining.",
+	"ambience": {
+		"light": "Dappled sunlight filtering through awnings",
+		"sound": "Chatter of merchants and laughter of children",
+		"smell": "Aromatic spices and freshly baked bread"
+	},
+	"landmarks": [
+		"Colorful stalls selling exotic goods",
+		"The Old Well, a source of fresh water",
+		"A vibrant mural depicting the history of Unka"
+	],
+	"creatures": [
+		"Local vendors and merchants",
+		"Curious children playing near the stalls",
+		"Adventurers seeking rare items"
+	],
+	"threats": [
+		"Pickpockets lurking in the crowd",
+		"Rogue animals scavenging for food",
+		"Unexpected magical disturbances"
+	],
+	"loot_or_clues": [
+		"A map leading to hidden treasures in the nearby woods",
+		"A mysterious charm sold by a traveling merchant",
+		"A flyer advertising quests posted by local adventurers"
+	],
+	"state": {},
+	"hooks": "This bustling market is not just for trade; it\u2019s a hub for adventurers seeking quests, rumors, and possibly, treasures.",
+	"request_id": "65f440b2-eb82-4da7-9f69-2273748718c0",
+	"game_id": "errotin",
+	"description": "Portabello Road is the heart of Unka, where locals and travelers mingle. Colorful stalls line the street, offering everything from fresh produce to magical trinkets. The air buzzes with energy as merchants hawk their wares and children dart between stalls. Amidst the lively atmosphere, whispers of hidden treasures and adventure float through the air, inviting those with a sense of curiosity.",
+	"schema_version": 1
+}

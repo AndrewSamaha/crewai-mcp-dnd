@@ -1,0 +1,36 @@
+{
+	"id": "19cbddb0-efb0-4227-ba36-4de70df47f0c",
+	"entity_type": "environment",
+	"name": "Ye old Tavern of Unka",
+	"kind": "Closed:Tavern",
+	"summary": "A bustling tavern filled with laughter, secrets, and the aroma of hearty stew.",
+	"ambience": {
+		"light": "Flickering candlelight casts dancing shadows on the wooden walls.",
+		"sound": "The clinking of mugs, lively chatter, and occasional laughter fills the air.",
+		"smell": "The rich scent of roasted meat and fresh bread wafts from the kitchen."
+	},
+	"landmarks": [
+		"A large oak bar polished by years of use",
+		"A stone hearth with a roaring fire",
+		"A dartboard covered in old scores and names"
+	],
+	"creatures": [
+		"Aegua, the elf rogue known for her quick wit and charm",
+		"Grizzled sailors sharing tales of the sea",
+		"Mysterious travelers cloaked in shadows"
+	],
+	"threats": [
+		"A band of thieves planning to rob the tavern",
+		"A local lord's guards searching for a fugitive"
+	],
+	"loot_or_clues": [
+		"A hidden stash behind the bar containing rare herbs",
+		"A mysterious map found tucked under a table"
+	],
+	"state": {},
+	"hooks": "The tavern serves as a meeting place for adventurers seeking quests and treasure. Rumors swirl of a hidden treasure nearby, drawing in all sorts of characters.",
+	"request_id": "e3762356-7a1f-4a4c-9b9c-08a0b3debe9c",
+	"game_id": "errotin",
+	"description": "Ye old Tavern of Unka stands proudly in the heart of the village, its timber frame adorned with colorful banners. Inside, it is a sanctuary for weary travelers and locals alike, where tales are spun over mugs of ale. The atmosphere is electric with anticipation, as every night brings new adventures and secrets waiting to be uncovered.",
+	"schema_version": 1
+}

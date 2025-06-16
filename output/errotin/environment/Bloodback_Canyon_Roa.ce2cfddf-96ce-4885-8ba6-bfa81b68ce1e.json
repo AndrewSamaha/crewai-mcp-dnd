@@ -1,0 +1,38 @@
+{
+	"id": "ce2cfddf-96ce-4885-8ba6-bfa81b68ce1e",
+	"entity_type": "environment",
+	"name": "Bloodback Canyon Road",
+	"kind": "Open:Road",
+	"summary": "A perilous road winding through the eerie depths of Bloodback Canyon, connecting the village of Varatoba to Unka.",
+	"ambience": {
+		"light": "Dappled sunlight filters through jagged cliffs, casting long shadows.",
+		"sound": "The distant echo of howling wolves and the rustle of unseen creatures.",
+		"smell": "The earthy scent of damp stone mingles with a hint of wild herbs."
+	},
+	"landmarks": [
+		"The Healing Well of Varatoba",
+		"Ancient runes etched into canyon walls",
+		"A precarious lookout point overlooking the canyon's depths"
+	],
+	"creatures": [
+		"Wolves lurking in the shadows",
+		"Mysterious spirits said to guard ancient secrets",
+		"Stray mountain goats navigating the treacherous terrain"
+	],
+	"threats": [
+		"Frequent wolf attacks on travelers",
+		"Falling rocks and unstable paths",
+		"Mysterious disappearances linked to the canyon's legends"
+	],
+	"loot_or_clues": [
+		"Fragments of ancient artifacts scattered along the path",
+		"Clues to uncovering the civilization hidden within the canyon",
+		"Herbs with magical properties found near the Healing Well"
+	],
+	"state": {},
+	"hooks": "Tensions in Varatoba rise as wolf attacks increase, prompting adventurers to traverse this dangerous road to uncover the ancient mysteries of Bloodback Canyon.",
+	"request_id": "3a042588-1c19-4bf0-bc6e-87a9370e54d9",
+	"game_id": "errotin",
+	"description": "The road is narrow and winding, bordered by steep cliffs that rise dramatically on either side. The atmosphere is heavy with a sense of foreboding, as whispers of ancient secrets seem to echo from the canyon walls. Travelers must tread carefully, for dangers lurk both in the shadows and above. Legends tell of a hidden civilization that once thrived here, and many seek its treasures\u2014though few return unscathed.",
+	"schema_version": 1
+}

@@ -1,0 +1,41 @@
+{
+	"id": "69c2cb18-93d6-4513-ac89-2412ea840a59",
+	"entity_type": "environment",
+	"name": "The Peak of Duneladon Mountain",
+	"kind": "Open:MountainPeak",
+	"summary": "A treacherous peak shrouded in eerie mist, home to ancient ruins and a legendary dragon.",
+	"ambience": {
+		"light": "Faint, diffused light filtering through thick mist",
+		"sound": "Whispers of the wind and distant roars echoing through the valleys",
+		"smell": "The sharp scent of cold stone and damp earth"
+	},
+	"landmarks": [
+		"Ancient ruins with faded carvings",
+		"A colossal stone altar at the summit",
+		"Dragon's lair hidden within a cavern"
+	],
+	"creatures": [
+		"Legendary dragon",
+		"Mountain trolls lurking in the shadows",
+		"Ghostly apparitions of ancient guardians"
+	],
+	"threats": [
+		"Avalanches triggered by disturbances",
+		"Hidden traps from ancient civilizations",
+		"Hostile factions vying for control of the mountain"
+	],
+	"loot_or_clues": [
+		"Fragments of ancient artifacts",
+		"Mystical crystals imbued with energy",
+		"Scrolls detailing forgotten lore"
+	],
+	"state": {
+		"dragon_awake": true,
+		"ruins_accessible": false
+	},
+	"hooks": "The peak holds the key to a long-lost civilization's power, but factions are clashing in their attempts to claim it. Players must navigate through treacherous terrain and face the dragon's wrath to uncover its secrets.",
+	"request_id": "6b69e153-a132-484d-be5a-d62a4f184b24",
+	"game_id": "errotin",
+	"description": "The Peak of Duneladon Mountain rises sharply against the sky, its rugged silhouette often obscured by swirling mists that weave through the valleys below. The air is thick with tension, as ancient powers awaken in response to those who dare approach. The remnants of a lost civilization linger here, their secrets waiting to be uncovered by brave adventurers.",
+	"schema_version": 1
+}

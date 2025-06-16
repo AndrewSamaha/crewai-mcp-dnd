@@ -15,21 +15,25 @@ GAME_INFORMATION = get_game_information(GAME_ID)
 
 crew_input = {
     "request_id": str(uuid4()),
-    "description": "The cave of sorrows on the east face of Duneladon Mountain",
+    "description": "The road between Varatoba and Unka that cuts right through Bloodback Canyon",
     "game_id": os.getenv("GAME_ID")
 }
 
+game_entity_server_params = StdioServerParameters(
+    command="python3", 
+    args=["-m", "servers.game_entity_maker"],
+    env={"UV_PYTHON": "3.12", **os.environ},
+)
+
+json_file_tool_server_params = StdioServerParameters(
+    command="python3", 
+    args=["-m", "servers.json_file_tool"],
+    env={"UV_PYTHON": "3.12", **os.environ},
+)
+
 server_params_list = [
-    StdioServerParameters(
-        command="python3", 
-        args=["-m", "servers.game_entity_maker"],
-        env={"UV_PYTHON": "3.12", **os.environ},
-    ),
-    StdioServerParameters(
-        command="python3", 
-        args=["-m", "servers.json_file_tool"],
-        env={"UV_PYTHON": "3.12", **os.environ},
-    ),
+    game_entity_server_params,
+    json_file_tool_server_params,
 ]
 
 # Use the StdioServerParameters object to create a MCPServerAdapter
@@ -50,7 +54,7 @@ with tracer.start_as_current_span("Environment Crew") as span:
         api_key=os.getenv("OPENAI_API_KEY"),
     )
     
-    with MCPServerAdapter(server_params_list) as aggregated_tools:
+    with MCPServerAdapter(game_entity_server_params) as game_entity_tools, MCPServerAdapter(json_file_tool_server_params) as json_file_tools:
         research_agent = Agent(
             role="Lore Archivist of Continuity",
             goal=(
@@ -65,7 +69,7 @@ with tracer.start_as_current_span("Environment Crew") as span:
                 "excellent at gathering all details related to a topic and compiling them"
                 "into a clear and actionable dossier."
             ),
-            tools=aggregated_tools,
+            tools=json_file_tools,
             verbose=True,
             llm=llm,
         )
@@ -115,7 +119,7 @@ with tracer.start_as_current_span("Environment Crew") as span:
                 "which this story takes place: "
                 f"{GAME_INFORMATION['background']}"
             ),
-            tools=aggregated_tools,
+            tools=game_entity_tools,
             verbose=True,
             cache=False,
             llm=llm,
@@ -124,10 +128,10 @@ with tracer.start_as_current_span("Environment Crew") as span:
         environment_creation_task = Task(
             name="environment_creation",
             description=(
-                "Use the appropriate tools to create an environment for the user's request with this"
-                "description: '{description}'."
-                "Here is the request ID: '{request_id}' and the game ID: '{game_id}'."
-                "Be creative and elaborate in rich detail for story and game hooks"
+                "Use the appropriate tools to create an environment for the user's request with this "
+                "description: '{description}'. "
+                "Here is the request ID: '{request_id}' and the game ID: '{game_id}'. "
+                "Be creative and elaborate in rich detail for story and game hooks."
             ),
             expected_output="The resulting game entity (environment) as a dictionary.",
             agent=environment_creator_agent,
@@ -135,18 +139,35 @@ with tracer.start_as_current_span("Environment Crew") as span:
             callback=callback_factory("environment_creation_task_callback", tags=["environment_creation"]),
         )
 
+        saving_agent = Agent(
+            role="Lore Chronicler",
+            goal=(
+                "Use the tools available to save the entity passed to you."
+            ),
+            backstory=(
+                "You are a meticulous collector and curator of story cannon. You are"
+                "excellent at documenting all pieces of history, persons, environments"
+                "characters, monsters, and items."
+            ),
+            tools=json_file_tools,
+            verbose=True,
+            llm=llm,
+            cache=False
+        )
+
         save_entity_task = Task(
             name="save_entity_task",
-            description="Save the game entity (the environment) as a JSON file:\n\n{environment_creation_task.output.raw_output}",
-            expected_output="The filename where the environment was saved and looks something like this: The_Barbers_Tavern.3d0dc1e1-89de-497c-9d43-9ba9b8442744.json",
-            agent=environment_creator_agent,
+            description=(
+                "Use the appropriate tools to save the entity by passing it to the right tool."
+            ),
+            expected_output="The tool call to save the environment will return the filename where the environment was saved and looks something like this: The_Barbers_Tavern.3d0dc1e1-89de-497c-9d43-9ba9b8442744.json",
+            agent=saving_agent,
             verbose=True,
             callback=callback_factory("save_entity_task_callback"),
         )
-
     
         crew = Crew(
-            agents=[research_agent, environment_creator_agent],
+            agents=[research_agent, environment_creator_agent, saving_agent],
             tasks=[research_task, environment_creation_task, save_entity_task],
             process=Process.sequential,
             verbose=True,

@@ -1,0 +1,34 @@
+{
+	"id": "e54e5056-2049-47aa-94be-fa574f000b9f",
+	"entity_type": "environment",
+	"name": "The Varatoba Inn",
+	"kind": "Closed:Inn",
+	"summary": "A bustling inn filled with the sound of laughter and clinking mugs, frequented by sailors and adventurers.",
+	"ambience": {
+		"light": "Warm candlelight flickers on wooden beams.",
+		"sound": "The murmur of conversations mixed with the occasional laughter and the crackling of a fireplace.",
+		"smell": "The rich aroma of spiced meats and freshly baked bread wafts through the air."
+	},
+	"landmarks": [
+		"A grand fireplace made of stone, the heart of the inn where patrons gather.",
+		"A dartboard with numerous scores from past champions, hinting at the competitive spirit of the locals."
+	],
+	"creatures": [
+		"Aegua, the charming rogue elf, often seen at the bar spinning tales of adventure.",
+		"A portly innkeeper named Brogan, who knows every patron's drink of choice."
+	],
+	"threats": [
+		"Occasional brawls between sailors that can spill out into the streets.",
+		"Rumors of a smuggler's plot that could involve some patrons."
+	],
+	"loot_or_clues": [
+		"A mysterious map that Aegua seems to guard closely, hinting at hidden treasures.",
+		"A faded letter found near the fireplace that speaks of a shipwreck and lost cargo."
+	],
+	"state": {},
+	"hooks": "The Varatoba Inn serves as a hub for adventurers seeking rumors, jobs, and camaraderie. Aegua's presence here may lead to quests involving the sea or uncovering secrets about his past.",
+	"request_id": "24f50c80-08cf-4355-8e0c-df2e943ec933",
+	"game_id": "errotin",
+	"description": "The Varatoba Inn stands proudly at the edge of the harbor, its wooden facade weathered by salty winds. Inside, it is warm and inviting, with rough-hewn tables and chairs filled with sailors sharing tales of their voyages. The inn is known for its hearty meals and strong ale, attracting patrons from far and wide. The atmosphere is lively, but there is an undercurrent of tension as whispers of smuggling and rivalry circulate among the guests.",
+	"schema_version": 1
+}
