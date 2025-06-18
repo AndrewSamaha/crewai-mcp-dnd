@@ -1,36 +1,28 @@
-# CrewAI MCP Demo
+# CrewAI MCP DnD
 
-This repository contains a demo of how to use the CrewAI MCP adapter to interact with the MCP Servers.
+Agents for creating Dungeons and Dragons environments and characters.
 
 ## Prerequisites
 
+- uv [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
 - Python >= 3.12 < 3.13
 - OPENAI API Key or an API key from another LLM provider
+- Langfuse API Key
 
 ## Installation
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-uv pip install 'crewai-tools[mcp]'
+uv venv .venv
 ```
 
 ## Usage
 
-1. Add API key to `.env`:
-```.env
-MODEL=openai/gpt-4o-mini # or any model provider/model
-OPENAI_API_KEY=sk-proj-***
-```
+1. Copy `.env.example` to `.env` and add parameters:
+ - OPENAI_API_KEY
+ - MODEL (e.g., openai/gpt-4o-mini)
+ - LANGFUSE related parameters
+ - GAME_ID (an arbitrary identifier for a given 'world')
 
-2. Run the SSE demo
-```bash
-python sse_client_demo.py
-```
-
-3. Run the StdIO demo
-```bash
-python stdio_client_demo.py
-```    
-
-More details in [CrewAI Docs](https://docs.crewai.com/mcp/crewai-mcp-integration/)
+2. Run a crew, e.g.,:
+ - `uv run environment_crew.py`
+ - `uv run character_crew.py`

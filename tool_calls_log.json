@@ -2426,3 +2426,429 @@
     "result": "Bloodback_Canyon_Roa.ce2cfddf-96ce-4885-8ba6-bfa81b68ce1e.json"
   }
 }
+{
+  "timestamp": "2025-06-18T08:42:20.846018",
+  "tool_name": "find_entities",
+  "label": "mcp_tool_input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Varatoba",
+    "game_id": "errotin",
+    "request_id": "4867ca69-08b0-4c3f-abbc-0361d17281fc"
+  }
+}
+{
+  "timestamp": "2025-06-18T08:42:20.885594",
+  "tool_name": "find_entities",
+  "label": "mcp_tool_output",
+  "data": {
+    "result": [
+      {
+        "id": "a6c4104e-fc62-4b09-a428-0b48e2d7631a",
+        "entity_type": "environment",
+        "name": "Village of Varatoba",
+        "kind": "Open:Village",
+        "summary": "A quaint village known for its healing well, nestled at the edge of ancient woods.",
+        "ambience": {
+          "light": "Soft sunlight filters through the leaves, casting dappled shadows on cobblestone paths.",
+          "sound": "The gentle babble of a stream mixed with the distant chatter of villagers.",
+          "smell": "The fresh scent of blooming herbs and the earthy aroma of the surrounding woods."
+        },
+        "landmarks": [
+          "Healing Well",
+          "The Elder's Lodge",
+          "Market Square",
+          "The Whispering Woods"
+        ],
+        "creatures": [
+          "Villagers",
+          "Wolves (recently spotted)",
+          "Small woodland creatures"
+        ],
+        "threats": [
+          "Recent wolf attacks causing fear among villagers.",
+          "Mysterious disappearances in the woods."
+        ],
+        "loot_or_clues": [
+          "A map leading to hidden treasures in the Whispering Woods.",
+          "An ancient talisman believed to ward off wolves."
+        ],
+        "state": {},
+        "hooks": "The village is at a tipping point; will the players help defend it against the wolves, or uncover the secrets hidden in the woods?",
+        "request_id": "09e0d4c9-1c52-4d3a-bc12-2f5843637c31",
+        "game_id": "errotin",
+        "description": "Varatoba is a serene village characterized by its tight-knit community and rich folklore. The villagers gather at the Healing Well, a site said to have miraculous properties, which draws travelers seeking cures and blessings. However, recent wolf attacks have cast a shadow over their peaceful existence, creating an atmosphere thick with tension. The surrounding Whispering Woods are home to both treasures and secrets waiting to be uncovered. As adventurers explore this charming yet perilous village, they will encounter challenges that test their courage and resourcefulness.",
+        "schema_version": 1
+      },
+      {
+        "id": "e54e5056-2049-47aa-94be-fa574f000b9f",
+        "entity_type": "environment",
+        "name": "The Varatoba Inn",
+        "kind": "Closed:Inn",
+        "summary": "A bustling inn filled with the sound of laughter and clinking mugs, frequented by sailors and adventurers.",
+        "ambience": {
+          "light": "Warm candlelight flickers on wooden beams.",
+          "sound": "The murmur of conversations mixed with the occasional laughter and the crackling of a fireplace.",
+          "smell": "The rich aroma of spiced meats and freshly baked bread wafts through the air."
+        },
+        "landmarks": [
+          "A grand fireplace made of stone, the heart of the inn where patrons gather.",
+          "A dartboard with numerous scores from past champions, hinting at the competitive spirit of the locals."
+        ],
+        "creatures": [
+          "Aegua, the charming rogue elf, often seen at the bar spinning tales of adventure.",
+          "A portly innkeeper named Brogan, who knows every patron's drink of choice."
+        ],
+        "threats": [
+          "Occasional brawls between sailors that can spill out into the streets.",
+          "Rumors of a smuggler's plot that could involve some patrons."
+        ],
+        "loot_or_clues": [
+          "A mysterious map that Aegua seems to guard closely, hinting at hidden treasures.",
+          "A faded letter found near the fireplace that speaks of a shipwreck and lost cargo."
+        ],
+        "state": {},
+        "hooks": "The Varatoba Inn serves as a hub for adventurers seeking rumors, jobs, and camaraderie. Aegua's presence here may lead to quests involving the sea or uncovering secrets about his past.",
+        "request_id": "24f50c80-08cf-4355-8e0c-df2e943ec933",
+        "game_id": "errotin",
+        "description": "The Varatoba Inn stands proudly at the edge of the harbor, its wooden facade weathered by salty winds. Inside, it is warm and inviting, with rough-hewn tables and chairs filled with sailors sharing tales of their voyages. The inn is known for its hearty meals and strong ale, attracting patrons from far and wide. The atmosphere is lively, but there is an undercurrent of tension as whispers of smuggling and rivalry circulate among the guests.",
+        "schema_version": 1
+      },
+      {
+        "id": "ce2cfddf-96ce-4885-8ba6-bfa81b68ce1e",
+        "entity_type": "environment",
+        "name": "Bloodback Canyon Road",
+        "kind": "Open:Road",
+        "summary": "A perilous road winding through the eerie depths of Bloodback Canyon, connecting the village of Varatoba to Unka.",
+        "ambience": {
+          "light": "Dappled sunlight filters through jagged cliffs, casting long shadows.",
+          "sound": "The distant echo of howling wolves and the rustle of unseen creatures.",
+          "smell": "The earthy scent of damp stone mingles with a hint of wild herbs."
+        },
+        "landmarks": [
+          "The Healing Well of Varatoba",
+          "Ancient runes etched into canyon walls",
+          "A precarious lookout point overlooking the canyon's depths"
+        ],
+        "creatures": [
+          "Wolves lurking in the shadows",
+          "Mysterious spirits said to guard ancient secrets",
+          "Stray mountain goats navigating the treacherous terrain"
+        ],
+        "threats": [
+          "Frequent wolf attacks on travelers",
+          "Falling rocks and unstable paths",
+          "Mysterious disappearances linked to the canyon's legends"
+        ],
+        "loot_or_clues": [
+          "Fragments of ancient artifacts scattered along the path",
+          "Clues to uncovering the civilization hidden within the canyon",
+          "Herbs with magical properties found near the Healing Well"
+        ],
+        "state": {},
+        "hooks": "Tensions in Varatoba rise as wolf attacks increase, prompting adventurers to traverse this dangerous road to uncover the ancient mysteries of Bloodback Canyon.",
+        "request_id": "3a042588-1c19-4bf0-bc6e-87a9370e54d9",
+        "game_id": "errotin",
+        "description": "The road is narrow and winding, bordered by steep cliffs that rise dramatically on either side. The atmosphere is heavy with a sense of foreboding, as whispers of ancient secrets seem to echo from the canyon walls. Travelers must tread carefully, for dangers lurk both in the shadows and above. Legends tell of a hidden civilization that once thrived here, and many seek its treasures\u2014though few return unscathed.",
+        "schema_version": 1
+      },
+      {
+        "id": "237e7017-b654-419d-a040-7e4ce8e451ce",
+        "entity_type": "environment",
+        "name": "Southern Gate of Varatoba Village",
+        "kind": "Open:VillageGate",
+        "summary": "A sturdy wooden gate adorned with symbols of protection, standing as a sentinel to the quaint yet troubled village of Varatoba.",
+        "ambience": {
+          "light": "Soft daylight filters through the trees, casting dappled shadows on the ground.",
+          "sound": "The distant sound of villagers going about their daily lives mixes with the rustle of leaves.",
+          "smell": "A hint of fresh earth and blooming wildflowers, intertwined with the faint scent of smoke from cooking fires."
+        },
+        "landmarks": [
+          "The Healing Well",
+          "Whispering Woods"
+        ],
+        "creatures": [
+          "Villagers",
+          "Wolves"
+        ],
+        "threats": [
+          "Recent wolf attacks that have put the villagers on edge."
+        ],
+        "loot_or_clues": [
+          "Tales of hidden treasures in the Whispering Woods.",
+          "A map leading to potential wolf dens."
+        ],
+        "state": {
+          "gate_open": false,
+          "tension_high": true
+        },
+        "hooks": "The Southern Gate serves as a crucial point for adventurers entering Varatoba, where they can hear whispers of recent dangers and discover quests related to the wolf attacks.",
+        "request_id": "577360ff-eaa4-46be-89a3-10ee3addfc8f",
+        "game_id": "errotin",
+        "description": "The Southern Gate of Varatoba Village is a wooden structure that stands strong against the elements. Intricate carvings depicting protective symbols adorn its surface. The gate is flanked by two sturdy posts, each wrapped in climbing vines. Beyond the gate lies the bustling village, known for its healing well and tight-knit community. However, the atmosphere is charged with unease due to recent wolf attacks that have frightened the villagers. Adventurers passing through are greeted by wary looks and hushed conversations about the dangers lurking in the nearby Whispering Woods.",
+        "schema_version": 1
+      }
+    ]
+  }
+}
+{
+  "timestamp": "2025-06-18T08:42:23.323743",
+  "tool_name": "find_entities",
+  "label": "mcp_tool_input",
+  "data": {
+    "entity_type": "",
+    "search_query": "Unka",
+    "game_id": "errotin",
+    "request_id": "4867ca69-08b0-4c3f-abbc-0361d17281fc"
+  }
+}
+{
+  "timestamp": "2025-06-18T08:42:23.328984",
+  "tool_name": "find_entities",
+  "label": "mcp_tool_output",
+  "data": {
+    "result": [
+      {
+        "id": "19cbddb0-efb0-4227-ba36-4de70df47f0c",
+        "entity_type": "environment",
+        "name": "Ye old Tavern of Unka",
+        "kind": "Closed:Tavern",
+        "summary": "A bustling tavern filled with laughter, secrets, and the aroma of hearty stew.",
+        "ambience": {
+          "light": "Flickering candlelight casts dancing shadows on the wooden walls.",
+          "sound": "The clinking of mugs, lively chatter, and occasional laughter fills the air.",
+          "smell": "The rich scent of roasted meat and fresh bread wafts from the kitchen."
+        },
+        "landmarks": [
+          "A large oak bar polished by years of use",
+          "A stone hearth with a roaring fire",
+          "A dartboard covered in old scores and names"
+        ],
+        "creatures": [
+          "Aegua, the elf rogue known for her quick wit and charm",
+          "Grizzled sailors sharing tales of the sea",
+          "Mysterious travelers cloaked in shadows"
+        ],
+        "threats": [
+          "A band of thieves planning to rob the tavern",
+          "A local lord's guards searching for a fugitive"
+        ],
+        "loot_or_clues": [
+          "A hidden stash behind the bar containing rare herbs",
+          "A mysterious map found tucked under a table"
+        ],
+        "state": {},
+        "hooks": "The tavern serves as a meeting place for adventurers seeking quests and treasure. Rumors swirl of a hidden treasure nearby, drawing in all sorts of characters.",
+        "request_id": "e3762356-7a1f-4a4c-9b9c-08a0b3debe9c",
+        "game_id": "errotin",
+        "description": "Ye old Tavern of Unka stands proudly in the heart of the village, its timber frame adorned with colorful banners. Inside, it is a sanctuary for weary travelers and locals alike, where tales are spun over mugs of ale. The atmosphere is electric with anticipation, as every night brings new adventures and secrets waiting to be uncovered.",
+        "schema_version": 1
+      },
+      {
+        "id": "2a98cbf2-4fec-45f9-92e8-298f55bfa93a",
+        "entity_type": "environment",
+        "name": "Village of Unka",
+        "kind": "Open:Village",
+        "summary": "A quaint village surrounded by lush fields, known for its vibrant market and friendly inhabitants.",
+        "ambience": {
+          "light": "Soft golden sunlight filtering through the leaves of ancient trees.",
+          "sound": "The cheerful chatter of villagers and the distant sound of a bubbling brook.",
+          "smell": "The aroma of freshly baked bread mingled with blooming wildflowers.",
+          "vibe": "A palpable sense of tension and unease hangs on everything and everyone"
+        },
+        "landmarks": [
+          "The Great Oak Tree - a centuries-old tree at the village center, said to be a meeting place for important decisions.",
+          "The Market Square - bustling with traders selling local goods, food, and crafts.",
+          "The Healer's Hut - a small cottage filled with herbs and remedies, run by the village's wise healer."
+        ],
+        "creatures": [
+          "Friendly dogs that roam freely, greeting visitors with wagging tails.",
+          "Occasional flocks of birds that fill the sky, adding to the village's charm."
+        ],
+        "threats": [
+          "Mysterious wolves that prowl the outskirts at night, causing fear among the villagers.",
+          "Rumors of a malevolent sorcerer lurking in the nearby woods, seeking to harness the village's magic."
+        ],
+        "loot_or_clues": [
+          "Ancient coins buried beneath the Great Oak Tree, rumored to be from a long-lost civilization.",
+          "A map leading to a hidden cave said to contain powerful artifacts."
+        ],
+        "state": {},
+        "hooks": "The village is experiencing strange phenomena - crops are failing, and livestock has gone missing. Villagers are looking for brave souls to uncover the source of these troubles.",
+        "request_id": "761d7cec-31fb-4a7a-8434-a95920773bdb",
+        "game_id": "errotin",
+        "description": "Unka is a picturesque village nestled in a valley, where nature thrives and community bonds are strong. The villagers are known for their hospitality and rich traditions, but dark forces seem to be creeping into their peaceful lives.",
+        "schema_version": 1
+      },
+      {
+        "id": "ce2cfddf-96ce-4885-8ba6-bfa81b68ce1e",
+        "entity_type": "environment",
+        "name": "Bloodback Canyon Road",
+        "kind": "Open:Road",
+        "summary": "A perilous road winding through the eerie depths of Bloodback Canyon, connecting the village of Varatoba to Unka.",
+        "ambience": {
+          "light": "Dappled sunlight filters through jagged cliffs, casting long shadows.",
+          "sound": "The distant echo of howling wolves and the rustle of unseen creatures.",
+          "smell": "The earthy scent of damp stone mingles with a hint of wild herbs."
+        },
+        "landmarks": [
+          "The Healing Well of Varatoba",
+          "Ancient runes etched into canyon walls",
+          "A precarious lookout point overlooking the canyon's depths"
+        ],
+        "creatures": [
+          "Wolves lurking in the shadows",
+          "Mysterious spirits said to guard ancient secrets",
+          "Stray mountain goats navigating the treacherous terrain"
+        ],
+        "threats": [
+          "Frequent wolf attacks on travelers",
+          "Falling rocks and unstable paths",
+          "Mysterious disappearances linked to the canyon's legends"
+        ],
+        "loot_or_clues": [
+          "Fragments of ancient artifacts scattered along the path",
+          "Clues to uncovering the civilization hidden within the canyon",
+          "Herbs with magical properties found near the Healing Well"
+        ],
+        "state": {},
+        "hooks": "Tensions in Varatoba rise as wolf attacks increase, prompting adventurers to traverse this dangerous road to uncover the ancient mysteries of Bloodback Canyon.",
+        "request_id": "3a042588-1c19-4bf0-bc6e-87a9370e54d9",
+        "game_id": "errotin",
+        "description": "The road is narrow and winding, bordered by steep cliffs that rise dramatically on either side. The atmosphere is heavy with a sense of foreboding, as whispers of ancient secrets seem to echo from the canyon walls. Travelers must tread carefully, for dangers lurk both in the shadows and above. Legends tell of a hidden civilization that once thrived here, and many seek its treasures\u2014though few return unscathed.",
+        "schema_version": 1
+      },
+      {
+        "id": "0dbef695-e1ea-4c92-8146-46aa3a7414ba",
+        "entity_type": "environment",
+        "name": "Portabello Road",
+        "kind": "Open:MarketStreet",
+        "summary": "A lively market street filled with vibrant stalls and the sounds of bargaining.",
+        "ambience": {
+          "light": "Dappled sunlight filtering through awnings",
+          "sound": "Chatter of merchants and laughter of children",
+          "smell": "Aromatic spices and freshly baked bread"
+        },
+        "landmarks": [
+          "Colorful stalls selling exotic goods",
+          "The Old Well, a source of fresh water",
+          "A vibrant mural depicting the history of Unka"
+        ],
+        "creatures": [
+          "Local vendors and merchants",
+          "Curious children playing near the stalls",
+          "Adventurers seeking rare items"
+        ],
+        "threats": [
+          "Pickpockets lurking in the crowd",
+          "Rogue animals scavenging for food",
+          "Unexpected magical disturbances"
+        ],
+        "loot_or_clues": [
+          "A map leading to hidden treasures in the nearby woods",
+          "A mysterious charm sold by a traveling merchant",
+          "A flyer advertising quests posted by local adventurers"
+        ],
+        "state": {},
+        "hooks": "This bustling market is not just for trade; it\u2019s a hub for adventurers seeking quests, rumors, and possibly, treasures.",
+        "request_id": "65f440b2-eb82-4da7-9f69-2273748718c0",
+        "game_id": "errotin",
+        "description": "Portabello Road is the heart of Unka, where locals and travelers mingle. Colorful stalls line the street, offering everything from fresh produce to magical trinkets. The air buzzes with energy as merchants hawk their wares and children dart between stalls. Amidst the lively atmosphere, whispers of hidden treasures and adventure float through the air, inviting those with a sense of curiosity.",
+        "schema_version": 1
+      }
+    ]
+  }
+}
+{
+  "timestamp": "2025-06-18T08:42:39.456322",
+  "tool_name": "create_environment",
+  "label": "nolabel",
+  "data": {
+    "request_id": "4867ca69-08b0-4c3f-abbc-0361d17281fc",
+    "game_id": "errotin",
+    "name": "Bloodback Canyon Road",
+    "kind": "Open:Road",
+    "summary": "A perilous road winding through the jagged cliffs of Bloodback Canyon, linking the villages of Varatoba and Unka.",
+    "ambience": {
+      "light": "Dappled sunlight filters through the towering cliffs, casting shifting shadows.",
+      "sound": "The distant echo of rushing water from a hidden stream, mingling with the calls of wildlife.",
+      "smell": "The earthy scent of moss and stone, intermingled with the faintest hint of wildflowers."
+    },
+    "landmarks": [
+      "The Healing Well of Varatoba",
+      "Ye old Tavern of Unka",
+      "A weathered stone shrine dedicated to the canyon spirits"
+    ],
+    "creatures": [
+      "Wolves lurking in the shadows",
+      "A wise old hermit known for his knowledge of canyon lore"
+    ],
+    "threats": [
+      "Ambushes by rogue bandits exploiting the tension between Varatoba and Unka",
+      "Wolf packs that have become bolder due to hunger"
+    ],
+    "loot_or_clues": [
+      "Fragments of ancient pottery that tell stories of travelers lost in the canyon",
+      "Maps marking safe paths through the dangerous terrain"
+    ],
+    "state": {
+      "wolf_attacks_increasing": true
+    },
+    "hooks": "Travelers must navigate this treacherous road, balancing between seeking refuge in Unka and the dangers posed by hungry wolves. The road is an essential trade route but now carries whispers of an impending threat.",
+    "closed_spec": null,
+    "open_spec": null,
+    "description": "As adventurers traverse the Bloodback Canyon Road, they are enveloped in an atmosphere that is both serene and tense. The towering cliffs rise steeply on either side, creating a sense of isolation, while the whispers of danger from the lurking wolves keep travelers on high alert. The vibrant flora along the roadside hints at the beauty that belies the lurking threats. With every step, adventurers feel the pull of adventure, challenged by nature's duality: its beauty and its ferocity."
+  }
+}
+{
+  "timestamp": "2025-06-18T08:43:03.893590",
+  "tool_name": "save_game_entity",
+  "label": "mcp_tool_input",
+  "data": {
+    "game_entity": {
+      "id": "45f8cac7-6665-457b-8186-9906ef3a82c5",
+      "entity_type": "environment",
+      "name": "Bloodback Canyon Road",
+      "kind": "Open:Road",
+      "summary": "A perilous road winding through the jagged cliffs of Bloodback Canyon, linking the villages of Varatoba and Unka.",
+      "ambience": {
+        "light": "Dappled sunlight filters through the towering cliffs, casting shifting shadows.",
+        "sound": "The distant echo of rushing water from a hidden stream, mingling with the calls of wildlife.",
+        "smell": "The earthy scent of moss and stone, intermingled with the faintest hint of wildflowers."
+      },
+      "landmarks": [
+        "The Healing Well of Varatoba",
+        "Ye old Tavern of Unka",
+        "A weathered stone shrine dedicated to the canyon spirits"
+      ],
+      "creatures": [
+        "Wolves lurking in the shadows",
+        "A wise old hermit known for his knowledge of canyon lore"
+      ],
+      "threats": [
+        "Ambushes by rogue bandits exploiting the tension between Varatoba and Unka",
+        "Wolf packs that have become bolder due to hunger"
+      ],
+      "loot_or_clues": [
+        "Fragments of ancient pottery that tell stories of travelers lost in the canyon",
+        "Maps marking safe paths through the dangerous terrain"
+      ],
+      "state": {
+        "wolf_attacks_increasing": true
+      },
+      "hooks": "Travelers must navigate this treacherous road, balancing between seeking refuge in Unka and the dangers posed by hungry wolves. The road is an essential trade route but now carries whispers of an impending threat.",
+      "request_id": "4867ca69-08b0-4c3f-abbc-0361d17281fc",
+      "game_id": "errotin",
+      "description": "As adventurers traverse the Bloodback Canyon Road, they are enveloped in an atmosphere that is both serene and tense. The towering cliffs rise steeply on either side, creating a sense of isolation, while the whispers of danger from the lurking wolves keep travelers on high alert. The vibrant flora along the roadside hints at the beauty that belies the lurking threats. With every step, adventurers feel the pull of adventure, challenged by nature's duality: its beauty and its ferocity.",
+      "schema_version": 1
+    }
+  }
+}
+{
+  "timestamp": "2025-06-18T08:43:03.895911",
+  "tool_name": "save_game_entity",
+  "label": "mcp_tool_output",
+  "data": {
+    "result": "Bloodback_Canyon_Roa.45f8cac7-6665-457b-8186-9906ef3a82c5.json"
+  }
+}

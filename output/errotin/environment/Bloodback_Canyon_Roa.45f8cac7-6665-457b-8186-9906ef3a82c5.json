@@ -1,0 +1,37 @@
+{
+	"id": "45f8cac7-6665-457b-8186-9906ef3a82c5",
+	"entity_type": "environment",
+	"name": "Bloodback Canyon Road",
+	"kind": "Open:Road",
+	"summary": "A perilous road winding through the jagged cliffs of Bloodback Canyon, linking the villages of Varatoba and Unka.",
+	"ambience": {
+		"light": "Dappled sunlight filters through the towering cliffs, casting shifting shadows.",
+		"sound": "The distant echo of rushing water from a hidden stream, mingling with the calls of wildlife.",
+		"smell": "The earthy scent of moss and stone, intermingled with the faintest hint of wildflowers."
+	},
+	"landmarks": [
+		"The Healing Well of Varatoba",
+		"Ye old Tavern of Unka",
+		"A weathered stone shrine dedicated to the canyon spirits"
+	],
+	"creatures": [
+		"Wolves lurking in the shadows",
+		"A wise old hermit known for his knowledge of canyon lore"
+	],
+	"threats": [
+		"Ambushes by rogue bandits exploiting the tension between Varatoba and Unka",
+		"Wolf packs that have become bolder due to hunger"
+	],
+	"loot_or_clues": [
+		"Fragments of ancient pottery that tell stories of travelers lost in the canyon",
+		"Maps marking safe paths through the dangerous terrain"
+	],
+	"state": {
+		"wolf_attacks_increasing": true
+	},
+	"hooks": "Travelers must navigate this treacherous road, balancing between seeking refuge in Unka and the dangers posed by hungry wolves. The road is an essential trade route but now carries whispers of an impending threat.",
+	"request_id": "4867ca69-08b0-4c3f-abbc-0361d17281fc",
+	"game_id": "errotin",
+	"description": "As adventurers traverse the Bloodback Canyon Road, they are enveloped in an atmosphere that is both serene and tense. The towering cliffs rise steeply on either side, creating a sense of isolation, while the whispers of danger from the lurking wolves keep travelers on high alert. The vibrant flora along the roadside hints at the beauty that belies the lurking threats. With every step, adventurers feel the pull of adventure, challenged by nature's duality: its beauty and its ferocity.",
+	"schema_version": 1
+}
