@@ -8,9 +8,10 @@ Agents for creating Dungeons and Dragons environments and characters.
 - Python >= 3.12 < 3.13
 - OPENAI API Key or an API key from another LLM provider
 - Langfuse API Key
+- ripgrep [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 
-## Installation
-
+## Environment Setup
+Assuming you have the above prerequisites installed, you can set up the environment by running:
 ```bash
 uv venv .venv
 ```

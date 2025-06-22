@@ -1,3 +1,4 @@
 .env
 .venv
+tool_calls_log.json
 __pycache__

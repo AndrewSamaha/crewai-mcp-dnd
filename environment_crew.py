@@ -15,7 +15,7 @@ GAME_INFORMATION = get_game_information(GAME_ID)
 
 crew_input = {
     "request_id": str(uuid4()),
-    "description": "The road between Varatoba and Unka that cuts right through Bloodback Canyon",
+    "description": "A dark hollow on the road between Varatoba and Unka",
     "game_id": os.getenv("GAME_ID")
 }
 
