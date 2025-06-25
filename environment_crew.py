@@ -72,6 +72,7 @@ with tracer.start_as_current_span("Environment Crew") as span:
             tools=json_file_tools,
             verbose=True,
             llm=llm,
+            cache=False
         )
 
         research_task = Task(
@@ -79,9 +80,9 @@ with tracer.start_as_current_span("Environment Crew") as span:
             description=(
                 "Use the search-oriented tools to locate any *existing* game "
                 "entities that relate to the proposed environment: **{description}**.\n"
-                "   - Search for characters who own, inhabit or neighbour the space.\n"
-                "   - Search for previously created environments that share location,\n"
-                "     culture, wealth level or architectural style.\n"
+                "In some cases, you made need to perform more than one search. E.g.,\n"
+                "If the input contains two nouns (e.g., the belrak from Ontabia),\n"
+                "then you should conduct two separate searches. One for 'belrak' and one for 'Ontabia'.\n"
                 "   - Summarise findings in a JSON object with keys:\n"
                 "   - related_entities\n"
                 "   - list of IDs or filenames\n"

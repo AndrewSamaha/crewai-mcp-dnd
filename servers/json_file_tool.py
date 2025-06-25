@@ -61,10 +61,20 @@ def find_entities(request_id: str, game_id: str, search_query: str, entity_type:
     Returns:
         list: A list of entities that match the given search query and entity_type.
     """
+    RETURN_SUMMARY = False
     log({"entity_type": entity_type, "search_query": search_query, "game_id": game_id, "request_id": request_id}, "find_entities", "mcp_tool_input")
     result = find_entities_fn(search_query, game_id, entity_type)
-    log({"result": result}, "find_entities", "mcp_tool_output")
-    return result
+    summary_result = [{"id": x["id"], "name": x["name"], "description": x["description"]} for x in result]
+    # we learned that if you return a list, only the first element in the list gets to the agent
+    # the solution is to wrap a list in a dictionary
+    if RETURN_SUMMARY:
+        summary_result_obj = { "relevant_environments": summary_result } 
+        log({"result_summary": summary_result_obj}, "find_entities", "mcp_tool_output")
+        return summary_result_obj
+    
+    result_obj = { "result": result }
+    log({"full_result": result_obj}, "find_entities", "mcp_tool_output")
+    return result_obj
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")
