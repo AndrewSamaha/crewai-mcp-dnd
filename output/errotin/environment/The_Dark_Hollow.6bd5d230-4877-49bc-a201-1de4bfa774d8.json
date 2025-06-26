@@ -1,0 +1,37 @@
+{
+	"id": "6bd5d230-4877-49bc-a201-1de4bfa774d8",
+	"entity_type": "environment",
+	"name": "The Dark Hollow",
+	"kind": "Open:Hollow",
+	"summary": "A foreboding hollow along the perilous Bloodback Canyon Road, shrouded in shadows and whispers of danger.",
+	"ambience": {
+		"light": "Dim and flickering as if from hidden sources.",
+		"sound": "The distant howling of wolves and rustling leaves.",
+		"smell": "A musty scent of damp earth mixed with pine."
+	},
+	"landmarks": [
+		"Ancient twisted trees forming a natural barrier.",
+		"A weathered stone marker with faded warnings about wolf sightings."
+	],
+	"creatures": [
+		"Wolves lurking in the shadows, watching travelers.",
+		"A solitary raven, often seen perched on a gnarled branch."
+	],
+	"threats": [
+		"Increased wolf activity in the area, posing threats to passing travelers.",
+		"Ambushes from bandits taking advantage of the hollow's concealment."
+	],
+	"loot_or_clues": [
+		"A hidden stash of supplies left by a previous traveler.",
+		"A torn piece of fabric from a villager, hinting at a struggle."
+	],
+	"state": {
+		"wolf_sightings": true,
+		"bandit_activity": true
+	},
+	"hooks": "Travelers must decide whether to brave the hollow or seek safer routes. Rumors circulate about a hidden treasure guarded by the wolves.",
+	"request_id": "b77ee7bb-9955-4b93-afac-936ee6e5807a",
+	"game_id": "errotin",
+	"description": "The Dark Hollow is a chilling space on the road between Varatoba and Unka. As adventurers approach, they feel the weight of the shadows around them. The air is thick with tension, and the faint howls of wolves echo through the trees, sending shivers down their spines. The hollow is known for its ancient trees that twist into unnatural shapes, creating an eerie canopy overhead. Travelers have reported seeing eyes watching them from the darkness, and stories of disappearances have become common talk in Varatoba's Inn.",
+	"schema_version": 1
+}

@@ -8,6 +8,10 @@ import os
 from uuid import uuid4
 from crewai import LLM
 from utils.game import get_game_information
+from crews.research.research_agent import build_research_agent
+from crews.research.research_task import build_research_task
+from crews.creation.environment import build_environment_creator_agent, build_environment_creation_task
+from crews.saving.saving import build_saving_agent, build_saving_task
 
 GAME_ID = os.getenv("GAME_ID")
 
@@ -15,7 +19,7 @@ GAME_INFORMATION = get_game_information(GAME_ID)
 
 crew_input = {
     "request_id": str(uuid4()),
-    "description": "A dark hollow on the road between Varatoba and Unka",
+    "description": "The Great Tree in the center of Unka",
     "game_id": os.getenv("GAME_ID")
 }
 
@@ -55,117 +59,14 @@ with tracer.start_as_current_span("Environment Crew") as span:
     )
     
     with MCPServerAdapter(game_entity_server_params) as game_entity_tools, MCPServerAdapter(json_file_tool_server_params) as json_file_tools:
-        research_agent = Agent(
-            role="Lore Archivist of Continuity",
-            goal=(
-                "Unearth every existing character, item, location or plot thread that "
-                "could influence the NEW environment described by the user. Compile a "
-                "clear, structured dossier so later agents keep tone, wealth level, "
-                "architectural style, alliances and story hooks 100-percent consistent with "
-                "established canon."
-            ),
-            backstory=(
-                "You are a meticulous collector and curator of story cannon. You are"
-                "excellent at gathering all details related to a topic and compiling them"
-                "into a clear and actionable dossier."
-            ),
-            tools=json_file_tools,
-            verbose=True,
-            llm=llm,
-            cache=False
-        )
+        research_agent = build_research_agent(llm, json_file_tools)
+        research_task = build_research_task(research_agent, callback_factory)
 
-        research_task = Task(
-            name="gather_lore_context",
-            description=(
-                "Use the search-oriented tools to locate any *existing* game "
-                "entities that relate to the proposed environment: **{description}**.\n"
-                "In some cases, you made need to perform more than one search. E.g.,\n"
-                "If the input contains two nouns (e.g., the belrak from Ontabia),\n"
-                "then you should conduct two separate searches. One for 'belrak' and one for 'Ontabia'.\n"
-                "   - Summarise findings in a JSON object with keys:\n"
-                "   - related_entities\n"
-                "   - list of IDs or filenames\n"
-                "   - narrative_clues\n"
-                "   - bullet list of facts that must stay coherent\n"
-                "   - tonal_guidelines\n"
-                "   - short phrases that describe mood / aesthetic\n\n"
-                "Return ONLY this JSON—no extra narration—so the next agent can parse it."
-                "Here is the request ID: '{request_id}' and the game ID: '{game_id}'."
-            ),
-            expected_output="JSON dossier as described above.",
-            agent=research_agent,
-            verbose=True,
-            callback=callback_factory("research_task_callback"),
-        )
+        environment_creator_agent = build_environment_creator_agent(llm, game_entity_tools, GAME_INFORMATION)
+        environment_creation_task = build_environment_creation_task(environment_creator_agent, callback_factory)
 
-
-        environment_creator_agent = Agent(
-            role="Environment Creator",
-            goal=(
-                "Given a brief description of the environment and maybe some expectations about how"
-                "the space will be used in the story, elaborate on the description to create a fully"
-                "realized space."
-            ),
-            backstory=(
-                "A seasoned Dungeon Master and story creator who can turn descriptions into elaborate"
-                "spaces for the story to unfold in rich ways. It is important for game entities to be"
-                "consistent with the world in which they exist. So, usually the work flow when creating"
-                "a new entity is to first do research by searching for existing entities"
-                "(using the find_entities tool) and then create a new entity (using the create_entity tool)."
-                "Generally, game entities like characters"
-                "and environments need to be CREATED first before they can be SAVED. So, tool calls"
-                "should happen in that order -- creation tools return properly formatted JSON objects"
-                "and save functions use those as input. Here is some information about the world in"
-                "which this story takes place: "
-                f"{GAME_INFORMATION['background']}"
-            ),
-            tools=game_entity_tools,
-            verbose=True,
-            cache=False,
-            llm=llm,
-        )
-
-        environment_creation_task = Task(
-            name="environment_creation",
-            description=(
-                "Use the appropriate tools to create an environment for the user's request with this "
-                "description: '{description}'. "
-                "Here is the request ID: '{request_id}' and the game ID: '{game_id}'. "
-                "Be creative and elaborate in rich detail for story and game hooks."
-            ),
-            expected_output="The resulting game entity (environment) as a dictionary.",
-            agent=environment_creator_agent,
-            verbose=True,
-            callback=callback_factory("environment_creation_task_callback", tags=["environment_creation"]),
-        )
-
-        saving_agent = Agent(
-            role="Lore Chronicler",
-            goal=(
-                "Use the tools available to save the entity passed to you."
-            ),
-            backstory=(
-                "You are a meticulous collector and curator of story cannon. You are"
-                "excellent at documenting all pieces of history, persons, environments"
-                "characters, monsters, and items."
-            ),
-            tools=json_file_tools,
-            verbose=True,
-            llm=llm,
-            cache=False
-        )
-
-        save_entity_task = Task(
-            name="save_entity_task",
-            description=(
-                "Use the appropriate tools to save the entity by passing it to the right tool."
-            ),
-            expected_output="The tool call to save the environment will return the filename where the environment was saved and looks something like this: The_Barbers_Tavern.3d0dc1e1-89de-497c-9d43-9ba9b8442744.json",
-            agent=saving_agent,
-            verbose=True,
-            callback=callback_factory("save_entity_task_callback"),
-        )
+        saving_agent = build_saving_agent(llm, json_file_tools)
+        save_entity_task = build_saving_task(saving_agent, callback_factory)
     
         crew = Crew(
             agents=[research_agent, environment_creator_agent, saving_agent],

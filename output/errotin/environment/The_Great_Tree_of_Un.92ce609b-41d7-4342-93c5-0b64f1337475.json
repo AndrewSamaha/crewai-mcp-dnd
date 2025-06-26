@@ -1,0 +1,36 @@
+{
+	"id": "92ce609b-41d7-4342-93c5-0b64f1337475",
+	"entity_type": "environment",
+	"name": "The Great Tree of Unka",
+	"kind": "Open:Landmark",
+	"summary": "A majestic Great Oak Tree stands in the heart of Unka, symbolizing unity and strength amidst growing unease.",
+	"ambience": {
+		"light": "Dappled sunlight filtering through the leaves.",
+		"sound": "The gentle rustle of leaves mixed with distant whispers of villagers.",
+		"smell": "Fresh earth and blooming wildflowers."
+	},
+	"landmarks": [
+		"Village square where townsfolk gather.",
+		"Nearby market filled with vibrant stalls."
+	],
+	"creatures": [
+		"Curious squirrels scurrying up the trunk.",
+		"Occasional birds singing from the branches."
+	],
+	"threats": [
+		"Rumors of a malevolent sorcerer lurking nearby.",
+		"Recent wolf attacks creating tension among villagers."
+	],
+	"loot_or_clues": [
+		"Hidden messages carved into the tree's bark.",
+		"A forgotten charm left by an ancient druid."
+	],
+	"state": {
+		"gathering_in_progress": false
+	},
+	"hooks": "The Great Tree serves as a focal point for villagers' decisions and may hold secrets that can influence the fate of Unka.",
+	"request_id": "b6869589-f11e-4153-afdb-e7fafed0fab7",
+	"game_id": "errotin",
+	"description": "The Great Oak Tree towers over the village square, its massive trunk gnarled with age, its branches stretching wide to provide shelter and shade. Beneath it, villagers often gather to discuss important matters, but recent threats have cast a shadow over this once-happy place. The air is thick with tension as whispers of dark magic and wolf attacks circulate among the friendly but wary locals.",
+	"schema_version": 1
+}
